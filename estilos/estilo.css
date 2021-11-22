@@ -1,0 +1,34 @@
+@charset "utf-8";
+h3 {
+    text-align: center;
+
+}
+
+.justificar{
+	text-align: justify;
+}
+
+.centrar{
+	display:block;
+	margin:auto;
+}
+
+body{
+	background-color: #c9e9fc ;
+}
+
+.container {
+	background-color: white;
+}
+
+#inferior{
+	color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+	position:absolute; /*El div será ubicado con relación a la pantalla*/
+	left:0px; /*A la derecha deje un espacio de 0px*/
+	right:0px; /*A la izquierda deje un espacio de 0px*/
+	bottom:0px; /*Abajo deje un espacio de 0px*/
+	height:30px; /*alto del div*/
+	z-index:0;
+	text-align: center;
+	 }
