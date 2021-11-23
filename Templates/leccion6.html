@@ -10,6 +10,7 @@
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -48,6 +49,8 @@
 
     <div class="container">
 
+        <h1 style="" >Herramientas de TypeScript en 5 minutos</h1>
+
         <div class="row">
             <div class="col-sm-3 ">
                 <ul class="list-group">
@@ -58,14 +61,129 @@
             </div>
 
             <div class="col-sm-9">
-                <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the
-                    navbar.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae architecto assumenda vitae
-                    voluptatem fugiat asperiores odit optio voluptas distinctio quod facilis earum voluptates corporis
-                    ratione dolores eius, excepturi laudantium.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga repellendus debitis velit
-                    corporis optio suscipit odit nobis ipsa, consequuntur quisquam deserunt maxime, nulla ullam culpa
-                    quasi aperiam voluptatibus distinctio.</p>
+                <p>Comencemos construyendo una aplicación web simple con TypeScript.</p>
+                <h2>Instalación de TypeScript</h2>
+                <p>Hay dos formas principales de hacer que TypeScript esté disponible para su proyecto:</p>
+                <ul>
+                    <li>A través de npm (el administrador de paquetes de Node.js)</li>
+                    <li>Instalando los complementos de Visual Studio de TypeScript</li>
+                </ul>
+                <p>Para usuarios de npm:</p>
+
+                <pre><code class="language-ts">   
+npm install -g typescript
+                </code></pre>
+
+                <h2>Construyendo su primer archivo TypeScript</h2>
+                <p>En su editor, escriba el siguiente código JavaScript en greeter.ts:</p>
+                <pre><code class="language-typescript">   
+function greeter(person) {
+    return "Hello, " + person;
+    }
+                       
+    let user = "Jane User";
+                       
+    document.body.textContent = greeter(user);
+                </code></pre>
+
+                <br>
+
+                <h2>Compilando tu código</h2>
+                <p>Usamos una .tsextensión, pero este código es solo JavaScript. Podría haber copiado / pegado esto directamente de una aplicación JavaScript existente.
+                <br><br>
+                 En la línea de comando, ejecute el compilador de TypeScript:</p>
+                <pre><code class="language-ts">   
+ tsc greeter.ts
+                </code></pre>
+                <br>
+                <p>El resultado será un archivo greeter.js que contiene el mismo JavaScript que introdujo. ¡Estamos en funcionamiento usando TypeScript en nuestra aplicación JavaScript!</p>
+                <p>Ahora podemos empezar a aprovechar algunas de las nuevas herramientas que ofrece TypeScript. Agregue una : string anotación de tipo al argumento de la función 'persona' como se muestra aquí:</p>
+
+                <pre><code class="language-typescript">   
+function greeter(person: string) {
+  return "Hello, " + person;
+}
+ 
+let user = "Jane User";
+ 
+document.body.textContent = greeter(user);
+                </code></pre>
+
+                <br>
+
+                <h2>Escribir anotaciones</h2>
+                <p>Las anotaciones de tipo en TypeScript son formas ligeras de registrar el contrato previsto de la función o variable. En este caso, pretendemos que se llame a la función de bienvenida con un solo parámetro de cadena. Podemos intentar cambiar el saludo de llamada para pasar una matriz en su lugar:</p>
+                <pre><code class="language-typescript">   
+function greeter(person: string) {
+  return "Hello, " + person;
+}
+ 
+let user = [0, 1, 2];
+ 
+document.body.textContent = greeter(user);
+                </code></pre>             
+                
+                <p>Al volver a compilar, verá un error:</p>
+                <pre><code class="language-ts">   
+ error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string'.
+                </code></pre>
+
+                <p>Del mismo modo, intente eliminar todos los argumentos de la llamada de bienvenida. TypeScript le permitirá saber que ha llamado a esta función con un número inesperado de parámetros. En ambos casos, TypeScript puede ofrecer un análisis estático basado tanto en la estructura de su código como en las anotaciones de tipo que proporcione.</p>
+
+                <p>Observe que aunque hubo errores, el greeter.jsarchivo aún se crea. Puede usar TypeScript incluso si hay errores en su código. Pero en este caso, TypeScript advierte que su código probablemente no se ejecutará como se esperaba.</p>
+
+                <!-- ------------------------------------------------------------------- -->
+                <br><br>
+                <h2>Interfaces</h2>  
+                <p>Desarrollemos más nuestra muestra. Aquí usamos una interfaz que describe objetos que tienen un campo de nombre y apellido. En TypeScript, dos tipos son compatibles si su estructura interna es compatible. Esto nos permite implementar una interfaz simplemente teniendo la forma que requiere la interfaz, sin una implementscláusula explícita .</p>
+                <pre><code class="language-ts">
+interface Person {
+firstName: string;
+lastName: string;
+}
+
+function greeter(person: Person) {
+return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+let user = { firstName: "Jane", lastName: "User" };
+
+document.body.textContent = greeter(user);
+                </code></pre>
+                <!-- ------------------------------------------------------------------- -->
+                <br>
+                <h2>Clases</h2>
+
+                <p>Finalmente, ampliemos el ejemplo una última vez con clases. TypeScript admite nuevas funciones en JavaScript, como la compatibilidad con la programación orientada a objetos basada en clases.</p>
+                <p>Aquí vamos a crear una Studentclase con un constructor y algunos campos públicos. Observe que las clases y las interfaces funcionan bien juntas, lo que permite que el programador decida el nivel correcto de abstracción.</p>
+                <p>También es de destacar que el uso de publicargumentos on para el constructor es una forma abreviada que nos permite crear automáticamente propiedades con ese nombre</p>
+                <pre><code class="language-ts">   
+class Student {
+    fullName: string;
+    constructor(
+        public firstName: string,
+        public middleInitial: string,
+        public lastName: string
+    ) {
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    }
+    
+    interface Person {
+    firstName: string;
+    lastName: string;
+    }
+    
+    function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+    }
+    
+    let user = new Student("Jane", "M.", "User");
+    
+    document.body.textContent = greeter(user);
+                </code></pre>
+
+                <p>Vuelva a ejecutar tsc greeter.tsy verá que el JavaScript generado es el mismo que el código anterior. Las clases en TypeScript son solo una abreviatura del mismo OO basado en prototipos que se usa con frecuencia en JavaScript.</p>
 
 
 
@@ -76,6 +194,7 @@
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
+    <script src="../estilos/prism/prism.js"></script>
 </body>
 
 </html>
