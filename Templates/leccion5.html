@@ -98,7 +98,7 @@
                     
                 </ul>
 
-                <p>El lenguaje de programación C ++ es un buen lugar para aprender sobre la sintaxis de tipo de estilo C. A diferencia de C ++, TypeScript usa tipos de sufijo, así: x: string lugar de string x .</p>
+                <p>El lenguaje de programación C ++ es un buen lugar para aprender sobre la sintaxis de tipo de estilo C. A diferencia de C ++, TypeScript usa tipos de sufijo, así: <em>x: string</em> en lugar de <em>string x </em>.</p>
                 <h2>Conceptos que no están en Haskell</h2>
                 <h3>Tipos Incorporados</h3>
 
@@ -159,23 +159,223 @@
                     <li>object</li>
                 </ul>
 
+                <h3>Otros tipos importantes de TypeScript</h3>
 
-                <pre><code class="language-typescript">   
-                    type One = { p: string };
-                    interface Two {
-                    p: string;
-                    }
-                    class Three {
-                    p = "Hello";
-                    }
-                    
-                    let x: One = { p: "hi" };
-                    let two: Two = x;
-                    two = new Three();
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Explicación</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>unknown</td>
+                        <td>el tipo superior.</td>
+                      </tr>
+                      <tr>
+                        <td>never</td>
+                        <td>el tipo de fondo.</td>
+                      </tr>
+                      <tr>
+                        <td>object literal</td>
+                        <td>por ejemplo, { property: Type }</td>
+                      </tr>
+                      <tr>
+                        <td>void</td>
+                        <td>un subtipo de undefined destinado a usarse como tipo de retorno.</td>
+                      </tr>
+                      <tr>
+                        <td>T[]</td>
+                        <td>matrices mutables, también escritas Array<T></td>
+                      </tr>
+                      <tr>
+                        <td>[T, T]</td>
+                        <td>tuplas,que son de longitud fija pero mutable</td>
+                      </tr>
+                      <tr>
+                        <td>(t: T) => U</td>
+                        <td>functions</td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <h4>Notas:</h4>
+                <ol>
+                    <li>La sintaxis de la función incluye nombres de parámetros. ¡Es muy difícil acostumbrarse a esto!
+                        <pre><code class="language-typescript">
+    let fst: (a: any, b: any) => any = (a, b) => a;
+
+    // o más precisamente:
+
+    let fst: <T, U>(a: T, b: U) => T = (a, b) => a;
+                        </code></pre>
+                    </li>
+                    <li>La sintaxis de tipo de literal de objeto refleja de cerca la sintaxis de valor de literal de objeto:
+                        <pre><code class="language-typescript">
+    let o: { n: number; xs: object[] } = { n: 1, xs: [] };
+                        </code></pre>
+                    </li>
+                    <li>[T, T]es un subtipo de T[]. Esto es diferente a Haskell, donde las tuplas no están relacionadas con las listas.</li>
+                </ol>
+
+                <h4>Tipos en caja</h4>
+                <p>JavaScript tiene equivalentes en caja de tipos primitivos que contienen los métodos que los programadores asocian con 
+                    esos tipos. TypeScript refleja esto con, por ejemplo, la diferencia entre el tipo primitivo <code>number</code> 
+                    y el tipo en caja <code>Number</code>. Los tipos en caja rara vez se necesitan, ya que sus métodos devuelven primitivas.</p>
+                <pre><code class="language-typescript">
+        (1).toExponential();
+        // equivalente a
+        Number.prototype.toExponential.call(1);
                 </code></pre>
 
+                <p>Tenga en cuenta que llamar a un método en un literal numérico requiere que esté entre paréntesis para ayudar al analizador.</p>
 
+                <h3>Mecanografía gradual</h3>
+                <p>TypeScript usa el tipo <code>any</code> siempre que no puede decir cuál debería ser el tipo de una expresión. En comparación con 
+                    <code>Dynamic</code>, llamar a <code>any</code> un tipo es una exageración. Simplemente apaga el verificador 
+                    de tipo donde aparece. Por ejemplo, puede insertar cualquier valor en un <code>any[]</code> sin marcar el valor de ninguna manera:</p>
+                
+                <pre><code class="language-typescript">
+    // with "noImplicitAny": false in tsconfig.json, anys: any[]
+    const anys = [];
+    anys.push(1);
+    anys.push("oh no");
+    anys.push({ anything: "goes" });
+                </code></pre>
 
+                <p>Y puede usar una expresión de tipo <code>any</code> en cualquier lugar:</p>
+                <pre><code class="language-typescript">
+    anys.map(anys[1]); // oh no, "oh no" is not a function
+                </code></pre>
+
+                <p><code>any</code> también es contagioso: si inicializa una variable con una expresión de tipo <code>any</code> , la variable también tiene el tipo <code>any</code> .</p>
+                <pre><code class="language-typescript">
+    let sepsis = anys[0] + anys[1]; // this could mean anything
+                </code></pre>
+                <span>Para obtener un error cuando TypeScript produce un <code>any</code> , use <code>"noImplicitAny": true</code> o <code>"strict": true</code> en <code> tsconfig.json</code> .</span>
+
+                <h3>Tipificación estructural</h3>
+                <span>El tipado estructural es un concepto familiar para la mayoría de los programadores funcionales,aunque Haskell y la mayoría de los ML no están tipados estructuralmente.Su forma básica es bastante simple:</span>
+                <pre><code class="language-typescript">
+    // @strict: falso
+    let o = { x: "hi", extra: 1 }; // ok
+    let o2: { x: string } = o; // ok
+                </code></pre>
+
+                <span>Y puede usar una expresión de tipo en <code>any</code>cualquier lugar:</span>
+
+                <span>Aquí, el objeto literal <code>{ x: "hi", extra: 1 }</code> tiene un tipo de literal coincidente <code>{ x: string, extra: number }</code>. Ese tipo es asignable a <code>{ x: string }</code> ya que tiene todas las propiedades 
+                    requeridas y esas propiedades tienen tipos asignables. La propiedad adicional no evita la asignación, solo la convierte en un subtipo de <code>{ x: string }</code>.</span>
+                <span>Los tipos con nombre simplemente dan un nombre a un tipo; para propósitos de asignabilidad, no hay diferencia entre el alias de tipo <code>One</code> el tipo de interfaz a <code>Two</code> continuación. Ambos tienen una 
+                    propiedad <code>p: string</code> . (Sin embargo, los alias de tipo se comportan de manera diferente a las interfaces con respecto a las definiciones recursivas y los parámetros de tipo).</span>
+                
+                <pre><code class="language-typescript">
+    type One = { p: string };
+    interface Two {
+        p: string;
+    }
+    class Three {
+        p = "Hello";
+    }
+ 
+    let x: One = { p: "hi" };
+    let two: Two = x;
+    two = new Three();
+                </code></pre>
+
+                <h3>Uniones</h3>
+                <span>En TypeScript, los tipos de unión no están etiquetados. En otras palabras, no son sindicatos discriminados como <code>data</code> en Haskell. Sin embargo, a menudo puede discriminar tipos en una unión utilizando etiquetas integradas u otras propiedades.</span>
+
+                <pre><code class="language-typescript">
+function start(
+    arg: string | string[] | (() => string) | { s: string }
+): string {
+    // esto es muy común en JavaScript
+    if (typeof arg === "string") {
+        return commonCase(arg);
+    } else if (Array.isArray(arg)) {
+        return arg.map(commonCase).join(",");
+    } else if (typeof arg === "function") {
+        return commonCase(arg());
+    } else {
+        return commonCase(arg.s);
+    }
+ 
+    function commonCase(s: string): string {
+        // finalmente, simplemente convierte una cadena en otra cadena
+        return s;
+    }
+}
+                </code></pre>
+                <span><code>string</code>, <code>Array</code> Y <code>Function</code> se han incorporado en los predicados de tipo, convenientemente dejando el tipo de objeto para la elserama. Sin embargo, es posible generar uniones que sean difíciles de diferenciar en tiempo de ejecución. Para un código nuevo, es mejor crear solo sindicatos discriminados.</span>
+                <span>Los siguientes tipos tienen predicados integrados:</span>
+
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Predicado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>string</td>
+                        <td>typeof s === "string"</td>
+                      </tr>
+                      <tr>
+                        <td>number</td>
+                        <td>typeof n === "number"</td>
+                      </tr>
+                      <tr>
+                        <td>bigint</td>
+                        <td>typeof m === "bigint"</td>
+                      </tr>
+                      <tr>
+                        <td>boolean</td>
+                        <td>typeof b === "boolean"</td>
+                      </tr>
+                      <tr>
+                        <td>symbol</td>
+                        <td>typeof g === "symbol"<T></td>
+                      </tr>
+                      <tr>
+                        <td>undefined</td>
+                        <td>typeof undefined === "undefined"</td>
+                      </tr>
+                      <tr>
+                        <td>function</td>
+                        <td>typeof f === "function"</td>
+                      </tr>
+                      <tr>
+                        <td>array</td>
+                        <td>Array.isArray(a)</td>
+                      </tr>
+                      <tr>
+                        <td>object</td>
+                        <td>typeof o === "object"</td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <span>Tenga en cuenta que las funciones y los arrays son objetos en tiempo de ejecución,pero tienen sus propios predicados.</span>
+
+                <h3>Intersecciones</h3>
+                <span>Además de las uniones, TypeScript también tiene intersecciones:</span>
+                <pre><code class="language-typescript">
+    type Combined = { a: number } & { b: string };
+    type Conflicting = { a: number } & { a: string };
+                </code></pre>
+                <span><code>Combined</code> tiene dos propiedades, <code>a</code> y <code>b</code> , tal como si hubieran sido escritos como un objeto de tipo literal. 
+                    La intersección y la unión son recursivas en caso de conflictos, entonces <code>Conflicting.a: number & string</code> .</span>
+                
+                <h3>Tipos de Unidad</h3>
+                <span>Los tipos de unidad son subtipos de tipos primitivos que contienen exactamente un valor primitivo. Por ejemplo, la cadena <code>"foo"</code> tiene el tipo <code>"foo"</code> . 
+                    Dado que JavaScript no tiene enumeraciones integradas, es común usar un conjunto de cadenas conocidas en su lugar. Las uniones de tipos de cadenas literales permiten que TypeScript escriba este patrón:</span>
+                <pre><code class="language-typescript">
+declare function pad(s: string, n: number, direction: "left" | "right"): string;
+pad("hi", 10, "left");
+                </code></pre>
 
 
             </div>
