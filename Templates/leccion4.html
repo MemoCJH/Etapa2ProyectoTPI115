@@ -20,8 +20,10 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
 
-    <nav class="navbar navbar-inverse ">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header"></div>
             <ul class="nav navbar-nav">
@@ -35,23 +37,23 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search" >
+                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search">
                     <div class="form-group navegacion">
-                       
+
                         <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
                         <input type=hidden name=sitesearch value="">
                     </div>
                     <button type="submit" class="btn btn-default">Buscar</button>
                     <img src="../images/typescript.png" alt="" width="34" height="34">
                 </form>
-                
+
             </ul>
         </div>
     </nav>
 
-    <h1 style="text-align: center;">TypeScript para programadores de Java / C#</h1>
-    <div class="container" style="padding: 20px;">
-        
+    <h1 style="text-align: center;" class="borde">TypeScript para programadores de Java / C#</h1>
+    <div class="container" style="padding: 20px; border-radius: 15px;">
+
         <div class="row">
             <div class="col-sm-3" style="padding-top: 20px;">
                 <ul class="list-group">
@@ -62,25 +64,189 @@
                     <li class="list-group-item"><a href="#tab5">Más...</a></li>
                 </ul>
             </div>
-            <div class="secciones">
+            <div class="secciones col-sm-9">
                 <article id="tab1">
-                    <h1>1</h1>
+
+                    <h2>Lo que debes saber...</h2>
+                    <p class="justificar">TypeScript es una opción popular para los programadores acostumbrados a otros
+                        lenguajes con escritura estática, como C # y Java.</p>
+
+                    <p class="justificar">El sistema de tipos de TypeScript ofrece muchos de los mismos beneficios, como
+                        una mejor finalización del código,
+                        una detección más temprana de errores y una comunicación más clara entre las partes de su
+                        programa. Si bien TypeScript
+                        proporciona muchas características familiares para estos desarrolladores, vale la pena dar un
+                        paso atrás para ver cómo JavaScript
+                        (y por lo tanto TypeScript) difieren de los lenguajes OOP tradicionales. Comprender estas
+                        diferencias lo ayudará a escribir mejor
+                        código JavaScript y evitará los errores comunes en los que pueden caer los programadores que
+                        pasan directamente de C # / Java a TypeScript.</p>
+                    <p class="justificar">TypeScript amplía la sintaxis de JS y agrega nuevas características orientadas
+                        a objetos como interfaces, clases,
+                        módulos y anotaciones, lo que lo hace más claro en la estructura del código y la división de
+                        módulos, y el código legible.
+                        Así que algunas personas dicen <strong>"TypeScript hace que JavaScript vuelva a ser
+                            Java".</strong></p>
+                    <p class="justificar">La característica fundamental de TypeScript es que compila en Javascript
+                        nativo, por lo que se puede
+                        usar en todo proyecto donde se esté usando Javascript. Dicho con otras palabras, cuando se usa
+                        TypeScript en algún
+                        momento se realiza su compilación, convirtiendo su código a Javascript común. El navegador, o
+                        cualquier otra plataforma
+                        donde se ejecuta Javascript, nunca llegará a enterarse que el código original estaba escrito en
+                        TypeScript, porque lo
+                        único que llegará a ejecutar es el Javascript resultante de la compilación.</p>
+
+                    <p class="justificar">En resumen, TypeScript es lo que se conoce como un "superset" de Javascript,
+                        aportando herramientas
+                        avanzadas para la programación que traen grandes beneficios a los proyectos.</p>
+
+                    <h2>¿Qué necesitas para usar TypeScript</h2>
+                    <p class="justificar">Básicamente necesitamos descargar dos programas. El primero es NodeJS, no
+                        porque necesitemos desarrollar con Node, sino porque el compilador de TypeScript está
+                        desarrollado en NodeJS.
+
+                        Desde el sitio de NodeJS encontramos las opciones para la instalación en nuestro sistema
+                        operativo, por medio de un típico instalador con su asistente (siguiente, siguiente…) Más
+                        información en el Manual de NodeJS.
+
+                        Luego necesitarás el TSC (Command-line TypeScript Compiler), la herramienta que nos permite
+                        compilar un archivo TypeScript a Javascript nativo.</p>
+
+                    <pre><code class="language-ts">npm install -g typescript</code></pre>
+
+                    <p class="justificar">Este es un ejemplo de un código de TypeScript: </p>
+                    <pre><code class="language-ts">var a:number = 9;
+a += 4;
+                            
+function mostrar(b:string) :void{
+    console.log(b);
+}
+mostrar('hola');</code></pre>
+
+                    <p class="justificar">Para compilarlo usarás el mencionado TSC y lanzarás un sencillo comando que
+                        convertirá el código a Javascript nativo.</p>
+                    <pre><code class="language-ts">tsc ejemplo.ts</code></pre>
+
+
                 </article>
                 <article id="tab2">
-                    <h1>2</h1>
+                    <h2>Coaprendizaje de JavaScript</h2>
+                    <p class="justificar">Si ya está familiarizado con JavaScript, pero es principalmente un programador
+                        de Java o C #, esta página de
+                        introducción puede ayudarlo a explicar algunos de los errores y errores comunes a los que podría
+                        ser susceptible. Algunas de las
+                        formas en que los tipos de modelos de TypeScript son bastante diferentes de Java o C #, y es
+                        importante tenerlas en cuenta al aprender
+                        TypeScript.</p>
+                    <p class="justificar">Si es un programador de Java o C # que es nuevo en JavaScript en general, le
+                        recomendamos que primero aprenda un poco de
+                        JavaScript sin tipos para comprender los comportamientos en tiempo de ejecución de JavaScript.
+                        Debido a que TypeScript no cambia la forma en
+                        que se ejecuta su código , aún tendrá que aprender cómo funciona JavaScript para escribir código
+                        que realmente haga algo.</p>
+                    <p class="justificar">Es importante recordar que TypeScript usa el mismo tiempo de ejecución que
+                        JavaScript, por lo que cualquier recurso
+                        sobre cómo lograr un comportamiento de ejecución específico (convertir una cadena en un número,
+                        mostrar una alerta, escribir un archivo
+                        en el disco, etc.) siempre se aplicará igualmente bien a Programas TypeScript. </p>
+                    <p style="text-align: center;">¡No se limite a recursos específicos de TypeScript!</p>
+                    <p style="text-align: center;"><iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/4kB3A3RZCBY" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></p>
+                    <h2>Algunos ejemplos de diferencias entre Typescript y JavaScript</h2>
+                    <h4>Tipos básicos</h4>
+                    <p class="justificar">index.js</p>
+                    <pre><code class="language-ts">const foo = 'bar'
+const bar = 1
+const baz = true
+const qux = ['bar', 'baz', 'qux']</code></pre>
+                    <p class="justificar">index.ts</p>
+                    <pre><code class="language-ts">const foo: string = 'bar'
+const bar: number = 1
+const baz: boolean = true
+const qux: string[] = ['bar', 'baz', 'qux']</code></pre>
+                    <br><h4>Null</h4>
+                    <p class="justificar">index.js</p>
+                    <pre><code class="language-ts">let u = undefined
+let n = null
+                        
+let a = 'bar'
+a = null
+                        
+let b = 'bar'
+b = null
+                        
+if (b != null) {
+    const l = b.length
+    console.log(l)
+}</code></pre>
+                   <p class="justificar">index.ts</p>
+                   <pre><code class="language-ts">let n: null = null
+                        
+let a: string = 'bar'
+// no compila: a = null
+let b: string | null = 'bar'
+// compila: b = null
+                        
+if (b != null) {
+    const l = b.length
+    console.log(l)
+}</code></pre>
+
+                    <br><h4>Funciones</h4>
+                    <p class="justificar">index.js</p>
+                    <pre><code class="language-ts">function suma(a, b = 1) {
+    return a + b
+}
+                        
+const res = suma(2).toFixed(4)
+console.log(res)</code></pre>
+                    <p class="justificar">index.ts</p>
+                    <pre><code class="language-ts">function suma(a: number, b: number = 1): number {
+    return a + b
+}
+                      
+const resultado = suma(2).toFixed(4)
+console.log(resultado)</code></pre>
                 </article>
                 <article id="tab3">
-                    <h1>3</h1>
+                    <h2>Repensar la clase</h2>
+                    <p class="justificar">C # y Java son lo que podríamos llamar lenguajes OOP obligatorios . En estos lenguajes, la clase es la unidad básica de organización del código 
+                        y también el contenedor básico de todos los datos y comportamientos en tiempo de ejecución. Obligando a toda la funcionalidad y los datos 
+                        que se realizará en las clases puede ser un buen modelo de dominio para algunos problemas, pero no todos los dominios necesita ser representado de esta manera.</p>
+                        <h4>Funciones y datos gratuitos</h4>
+                        <p class="justificar">En JavaScript, las funciones pueden vivir en cualquier lugar y los datos se pueden transmitir libremente sin estar dentro de un archivo classo struct. 
+                            Esta flexibilidad es extremadamente poderosa. Las funciones "libres" (las que no están asociadas con una clase) que trabajan sobre datos sin una jerarquía 
+                            OOP implícita tienden a ser el modelo preferido para escribir programas en JavaScript.</p><br>
+                            <h4>Clases estáticas</h4>
+                            <p class="justificar">Además, ciertas construcciones de C # y Java, como singletons y clases estáticas, son innecesarias en TypeScript.</p>
+                            <h4 style="text-align: center;">Más sobre las clases</h4>
+                            <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Ivm6FiEh0ck?start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                            <h2>OOP en TypeScript</h2>
+                            <p class="justificar">Dicho esto, ¡aún puedes usar las clases si quieres! Algunos problemas son adecuados para ser resueltos por una jerarquía OOP 
+                                tradicional, y el soporte de TypeScript para clases de JavaScript hará que estos modelos sean aún más poderosos. TypeScript admite muchos patrones 
+                                comunes, como la implementación de interfaces, herencia y métodos estáticos.</p>
+                            <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/dDgCIW21eZQ?start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+                            
                 </article>
                 <article id="tab4">
                     <h1>4</h1>
                 </article>
                 <article id="tab5">
-                    <h1>5</h1>
+                    <h1>Curso Completo</h1>
+                    <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Xxqh0RoWxNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </article>
-            </div> 
+            </div>
         </div>
+        <div style="background-color: #ffffff; height: 150px;"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1" nonce="Tbk4f7L3"></script>
+
+        <div class="fb-comments" data-href="https://github.com/MemoCJH/Etapa2ProyectoTPI115" data-width="100%" data-numposts="5"></div>
     </div>
+    <div style="background-color: #c9e9fc; height: 50px;"></div>
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
