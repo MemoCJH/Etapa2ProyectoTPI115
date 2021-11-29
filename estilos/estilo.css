@@ -15,6 +15,7 @@ h3 {
 
 body{
 	background-color: #c9e9fc ;
+	margin-top: 60px;
 }
 
 .container {
@@ -24,13 +25,15 @@ body{
 #inferior{
 	color: rgb(0, 0, 0);
 	background: rgb(255, 255, 255);
-	 /*El div será ubicado con relación a la pantalla*/
+	position: absolute; /*El div será ubicado con relación a la pantalla*/
 	left:0px; /*A la derecha deje un espacio de 0px*/
 	right:0px; /*A la izquierda deje un espacio de 0px*/
 	bottom:0px; /*Abajo deje un espacio de 0px*/
 	height:30px; /*alto del div*/
-	z-index:0;
+	top: auto;
+	z-index:9999;
 	text-align: center;
+
 	 }
 
 .list-group-item{
@@ -45,3 +48,18 @@ body{
 	background: #365b77;
 }
 
+html{
+	min-height: 100%;
+	position: relative;
+}
+
+.borde{
+	border-radius: 15px;
+	background-color: whitesmoke;
+	border-color: rgb(1, 116, 145);
+    border-width: 5px;
+    border-style: solid;
+	width: 1174px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}

@@ -10,14 +10,20 @@
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="../javascript/temas.js"></script>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse ">
+    <div id="fb-root"></div>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header"></div>
             <ul class="nav navbar-nav">
@@ -45,38 +51,192 @@
         </div>
     </nav>
 
-
-    <div class="container">
+    <h1 style="text-align: center;" class="borde">Lo que debes saber antes de iniciar con TypeScript</h1>
+    <div class="container" style="padding: 20px; border-radius: 15px;">
 
         <div class="row">
-            <div class="col-sm-3 ">
+            <div class="col-sm-3" style="padding-top: 20px;">
                 <ul class="list-group">
-                    <li class="list-group-item">tema 1</li>
-                    <li class="list-group-item">tema 2</li>
-                    <li class="list-group-item">tema 3</li>
+                    <li class="list-group-item"><a href="#tab1">¿Qué es TypeScript?</a></li>
+                    <li class="list-group-item"><a href="#tab2">Diferencias entre TypeScript y JavaScript</a></li>
+                    <li class="list-group-item"><a href="#tab3">Ventajas de usar este lenguaje de programación</a></li>
+                    <li class="list-group-item"><a href="#tab4">¿Utilizar TS o JS?</a></li>
+                    <li class="list-group-item"><a href="#tab5">Más...</a></li>
                 </ul>
             </div>
+            <div class="secciones col-sm-9">
+                <article id="tab1">
+                    <h1>¿Qué es TypeScript?</h1>
+                    <p>TypeScript (TS) es un lenguaje de programación construido a un nivel superior de JavaScript (JS).
+                        Esto quiere decir que TypeScript dota al lenguaje de varias características adicionales que
+                        hacen que podamos escribir código con menos errores, más sencillo, coherente y fácil de probar,
+                        en definitiva, más limpio y sólido.</p>
 
-            <div class="col-sm-9">
-                <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the
-                    navbar.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae architecto assumenda vitae
-                    voluptatem fugiat asperiores odit optio voluptas distinctio quod facilis earum voluptates corporis
-                    ratione dolores eius, excepturi laudantium.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga repellendus debitis velit
-                    corporis optio suscipit odit nobis ipsa, consequuntur quisquam deserunt maxime, nulla ullam culpa
-                    quasi aperiam voluptatibus distinctio.</p>
+                    <p>Fue creado por Microsoft en 2012 y, desde entonces, su adopción no ha hecho más que crecer.
+                        Especialmente, desde que Google decidió adoptarlo como lenguaje por defecto para desarrollar con
+                        Angular. Aunque, hoy en día, podemos desarrollar con TypeScript en cualquiera de los frameworks
+                        o librerías más punteras, como son React para el frontend o Node para el backend.</p>
 
+                </article>
+                <article id="tab2">
+                    <h1>Diferencias entre TypeScript y JavaScript</h1>
 
+                    <p>En la primera ejemplo podemos ver un fichero .js con la declaración e inicialización de una
+                        variable. La variable se inicializa con un número, pero podemos observar que más adelante su
+                        valor se reemplaza con una cadena de caracteres y no pasa absolutamente nada.</p>
 
+                    <pre><code class="language-ts">   
+                    let variable = 5;
+                    variable = 'Profile Software Services';
+                    </code></pre>
 
+                    <p>El segundo ejemplo se trata de un fichero .ts, donde hacemos lo mismo que en el fichero
+                        JavaScript. La diferencia es que aquí te marca el error, ya que hemos declarado una variable
+                        tipo number y le hemos cambiado el valor por un string. Así, a la hora de compilar el código,
+                        también se marcará el error y no estará todo en orden hasta que lo arregles.</p>
+
+                    <pre><code class="language-ts">   
+                    //Tipado estático
+                    let otraVariable: number;
+                    otraVariable = 5;
+                    otraVariable = 'Profile Software Service';
+
+                    //Tipado dinámico
+                    otraVariable2 = any;
+                    otraVariable2 = "Profile Software Service";
+                    </code></pre>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+                <article id="tab3">
+                    <h1>Ventajas de usar este lenguaje de programación</h1>
+                    <ul>
+                        <li>Escalabilidad del código en un “Interface oriented development”</li>
+                        <li>Te ayuda con equipos en crecimiento</li>
+                        <li>Herramientas y comunidad, como por ejemplo la comunidad que empezó Microsoft.</li>
+                        <li>ES-next compliance</li>
+                        <li>Types ha demostrado promover la cualidad del código y entendibilidad. Equipos grandes como
+                            (Google, Microsoft, Facebook) también han descubierto el valor que aporta Typescript.</li>
+                        <li>Incrementa tu agilidad en el refactoring del código. Es mejor que el compilador encuentre
+                            errores que cometerlos en el “runtime”.</li>
+                        <li>Types es uno de los mejores métodos de documentación que hay en este momento. La función
+                            signature es un teorema y la función body es la prueba.</li>
+                        <li>Te da una muestra del futuro de JavaScript, con elementos tipados.</li>
+                        <li>Las inyecciones de dependencias dan mucha oportunidad para realizar testing y API´s basadas
+                            en controlador. Esto combinado con librerías de auto inyección, hace que el código sea mucho
+                            mejor mantenible y predecible. Además está tipado, si alguna vez decides cambiar tu servicio
+                            logger, puedes hacerlo de una manera muy sencilla con tipos e interfaces. Si hay algo
+                            inesperado, tu código simplemente no compilará.</li>
+                        <li>Testeabilidad. Con la inyección de Dependencias, el testeo se convierte en tarea fácil.
+                            Puedes mockear los servicios de testeo con las mismas interfaces que los reales. Tu código
+                            no los distinguirá y podrás conseguir una cobertura completa en tu entorno.</li>
+                        <li>Te ayuda a implementar patrones de diseño SOLID a un lenguaje que no lo soporte.</li>
+                        <li>Promueve la innovación y el cambio. Con medidas que aseguren que no se vaya en la dirección
+                            equivocada.</li>
+                        <li>Hace que el código se entienda mejor. El desarrollador reconoce más rápidamente la función
+                            de cada código.</li>
+                        <li>Habilidad de compilar hacia una versión de Javascript que funciona en todos los browsers.
+                        </li>
+                        <li>Una de las mejores ventajas de Typescript es la finalización del código y IntelliSense. Te
+                            ayuda a completar tu código a medida que está escrito.</li>
+                        <li>Código limpio. La escritura Estática es una característica que detecta errores de les
+                            desarrolladores. Promueve que se escriba un lenguaje más robusto y fácil de mantener. Por lo
+                            que es un lenguaje más limpio.</li>
+                        <li>Puedes escribir fácilmente código orientado a objetos sin mucho conocimiento.</li>
+                        <li>El refactoring con las herramientas de Typescript es mucho más fácil y rápido.</li>
+                    </ul>
+                </article>
+                <article id="tab4">
+                    <h1>¿Utilizar TS o JS?</h1>
+                    <p>Si profundizamos más en TypeScript y JavaScript, obtenemos una comparativa más exhaustiva de
+                        ambos:</p>
+                    <ul>
+                        <li>
+                            Tipado estático, genérico, estructural y enumerados: en JS no existen como tal los tipados,
+                            aunque los enumerados se pueden simular con clases sencillas. Mientras que TS es un lenguaje
+                            fuertemente tipado, donde se pueden crear tipos genéricos o interfaces.
+                        </li>
+
+                        <li>
+                            Modularización: TS ofrece un soporte directo para módulos, mientras que JS lo hace a través
+                            de ECMAScript 6.
+                        </li>
+
+                        <li>
+                            Tuplas: JS no las soporta, pero si TS.
+                        </li>
+
+                        <li>
+                            Orientación a objetos: la sintaxis de TS para la programación orientada a objetos es muy
+                            similar a la de otros lenguajes como Java o C#. Y además añade clases abstractas y
+                            modificadores de acceso, entre otras características. En JS también se puede programar
+                            orientado a objetos, pero es algo más complejo.
+
+                        </li>
+
+                        <li>
+                            Decoradores: JS no tiene soporte para decoradores, mientras que TS si.
+                        </li>
+
+                        <li>
+                            Interfaces: Como hemos mencionado, en TS las interfaces son imprescindibles, brindándote la
+                            posibilidad de crear escenarios más avanzados. En JS no existe soporte para interfaces.
+                        </li>
+
+                    </ul>
+
+                    <p>Con esta comparativa podemos observar que TypeScript es un lenguaje muchísimo más maduro que
+                        JavaScript . Y, aunque sea más difícil de aprender, la curva de aprendizaje tampoco es muy
+                        complicada en relación a los beneficios que te va a aportar como desarrollador para el futuro.
+                    </p>
+
+                    <p>En proyectos pequeños, usar TypeScript es un poco brusco, por lo que quizá no merezca la pena.
+                        Ahora bien, en proyectos medianos o grandes, y sobre todo en un equipo de desarrollo, escribir
+                        código en TS ofrece grandes ventajas que se van a notar a corto y a largo plazo.</p>
+
+                    <p>Si trabajas con frameworks, usar TypeScript es casi una obligación. Angular, como hemos dicho
+                        antes, está escrito en este lenguaje y, por tanto, su documentación. Si a esto le sumamos que en
+                        todas las empresas de desarrollo software los principales proyectos utilizan alguno de estos
+                        frameworks o librerías, blanco y en botella.
+                    </p>
+                </article>
+                <article id="tab5">
+                    <h1>5</h1>
+                </article>
             </div>
         </div>
 
+        <div style="background-color: #ffffff; height: 150px;"></div>
+
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1"
+            nonce="Tbk4f7L3"></script>
+
+        <div class="fb-comments" data-href="https://github.com/MemoCJH/Etapa2ProyectoTPI115" data-width="100%"
+            data-numposts="5"></div>
+
     </div>
+
+    <div style="background-color: #c9e9fc; height: 50px;"></div>
+
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
+
+    <script src="../estilos/prism/prism.js"></script>
+
 </body>
 
 </html>
