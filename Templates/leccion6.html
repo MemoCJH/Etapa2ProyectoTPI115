@@ -54,9 +54,9 @@
         <div class="row">
             <div class="col-sm-3 ">
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="leccion6.html">Instalacion y primeros pasos</a></li>
-                    <li class="list-group-item"><a href="leccion6_subtemas/interfaces.html">Interfaces</a> </li>
-                    <li class="list-group-item"><a href="leccion6_subtemas/clases.html">Clases</a> </li>
+                    <li class="list-group-item">Tema 1</li>
+                    <li class="list-group-item"> Tema 2</li>
+                    <li class="list-group-item">Tema 3 </li>
                 </ul>
             </div>
 
@@ -134,7 +134,59 @@ document.body.textContent = greeter(user);
 
 
                 <!-- ------------------------------------------------------------------- -->
-                
+                <h2>Interfaces</h2>  
+                <p>Desarrollemos más nuestra muestra. Aquí usamos una interfaz que describe objetos que tienen un campo de nombre y apellido. En TypeScript, dos tipos son compatibles si su estructura interna es compatible. Esto nos permite implementar una interfaz simplemente teniendo la forma que requiere la interfaz, sin una implementscláusula explícita .</p>
+                <pre><code class="language-ts">
+interface Person {
+firstName: string;
+lastName: string;
+}
+
+function greeter(person: Person) {
+return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+let user = { firstName: "Jane", lastName: "User" };
+
+document.body.textContent = greeter(user);
+                </code></pre>
+                <!-- ------------------------------------------------------------------- -->
+
+                <h2>Clases</h2>
+
+                <p>Finalmente, ampliemos el ejemplo una última vez con clases. TypeScript admite nuevas funciones en JavaScript, como la compatibilidad con la programación orientada a objetos basada en clases.</p>
+                <p>Aquí vamos a crear una Studentclase con un constructor y algunos campos públicos. Observe que las clases y las interfaces funcionan bien juntas, lo que permite que el programador decida el nivel correcto de abstracción.</p>
+                <p>También es de destacar que el uso de publicargumentos on para el constructor es una forma abreviada que nos permite crear automáticamente propiedades con ese nombre</p>
+                <pre><code class="language-ts">   
+class Student {
+    fullName: string;
+    constructor(
+        public firstName: string,
+        public middleInitial: string,
+        public lastName: string
+    ) {
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    }
+    
+    interface Person {
+    firstName: string;
+    lastName: string;
+    }
+    
+    function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+    }
+    
+    let user = new Student("Jane", "M.", "User");
+    
+    document.body.textContent = greeter(user);
+                </code></pre>
+
+                <p>Vuelva a ejecutar tsc greeter.tsy verá que el JavaScript generado es el mismo que el código anterior. Las clases en TypeScript son solo una abreviatura del mismo OO basado en prototipos que se usa con frecuencia en JavaScript.</p>
+
+                <p>Para poner a prueba tus conocimientos resuelva el siguiente cuestorionario</p>
+                <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a>
 
 
 
