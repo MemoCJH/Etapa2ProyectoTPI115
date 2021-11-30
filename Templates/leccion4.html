@@ -233,20 +233,110 @@ console.log(resultado)</code></pre>
                             
                 </article>
                 <article id="tab4">
-                    <h1>4</h1>
+                    <h2>Repensar los tipos</h2>
+                    <p>La comprensión de TypeScript de un tipo es en realidad bastante diferente a la de C # o Java. Exploremos algunas diferencias.</p>
+                    <h3>Sistemas de tipo nominal reificado</h3>
+                    <p class="justificar">En C # o Java, cualquier valor u objeto dado tiene un tipo exacto, ya sea nullun tipo de clase primitivo o conocido. Podemos llamar a métodos como value.GetType()o value.getClass()para consultar el tipo exacto en tiempo de ejecución. La definición de este tipo residirá en una clase en algún lugar con algún nombre, y no podemos usar dos clases con formas similares en lugar de la otra a menos que haya una relación de herencia explícita o una interfaz comúnmente implementada.</p>
+                    <h3>Tipos como conjuntos</h3>
+                    <p class="justificar">En C # o Java, es significativo pensar en una correspondencia uno a uno entre los tipos de tiempo de ejecución y sus declaraciones en tiempo de compilación.</p>
+                    <p class="justificar">En TypeScript, es mejor pensar en un tipo como un conjunto de valores que comparten algo en común. Debido a que los tipos son solo conjuntos, un valor particular puede pertenecer a muchos conjuntos al mismo tiempo.</p>
+                    <p class="justificar">Una vez que empiezas a pensar en los tipos como conjuntos, ciertas operaciones se vuelven muy naturales. Por ejemplo, en C #, es incómodo pasar un valor que sea un <i>string</i> o <i>int</i>, porque no hay un solo tipo que represente este tipo de valor.</p>
+                    <p class="justificar">En TypeScript, esto se vuelve muy natural una vez que te das cuenta de que cada tipo es solo un conjunto. ¿Cómo describe un valor que pertenece al <i>string</i> conjunto o al <i>number</i> conjunto? Simplemente pertenece a la unión de los conjuntos: <i>string</i> |<i>number</i>.</p>
+                    <p class="justificar">TypeScript proporciona una serie de mecanismos para trabajar con tipos de una manera teórica de conjuntos, y los encontrará más intuitivos si piensa en los tipos como conjuntos.</p>
+                    <h3>Tipos estructurales borrados</h3>
+                    <p class="justificar">En TypeScript, los objetos no son de un solo tipo exacto. Por ejemplo, si construimos un objeto que satisface una interfaz, podemos usar ese objeto donde se espera esa interfaz aunque no haya una relación declarativa entre los dos.</p>
+                    <pre><code class="language-ts">interface Pointlike {
+    x: number;
+    y: number;
+}
+interface Named {
+    name: string;
+}
+                       
+function logPoint(point: Pointlike) {
+    console.log("x = " + point.x + ", y = " + point.y);
+}
+                       
+function logName(x: Named) {
+    console.log("Hello, " + x.name);
+}
+                       
+const obj = {
+    x: 0,
+    y: 0,
+    name: "Origin",
+};
+                       
+logPoint(obj);
+logName(obj);</code></pre>
+
+                    <p class="justificar">El sistema de tipos de TypeScript es estructural , no nominal: podemos usarlo <i>obj</i> como un <i>Pointlike</i> porque tiene <i>x</i> y <i>y</i> propiedades que son ambos números. Las relaciones entre los tipos están determinadas por las propiedades que contienen, no por si se declararon con alguna relación en particular.</p>
+                    <p class="justificar">Sistema de tipos de transcripción también está no cosificado : No hay nada en tiempo de ejecución que nos dicen que <i>obj</i> es <i>Pointlike</i>. De hecho, el <i>Pointlike</i> tipo no está presente de ninguna forma en tiempo de ejecución.</p>
+                    <p class="justificar">Volviendo a la idea de tipos como conjuntos , podemos pensar en ellos <i>obj</i> como miembros tanto del <i>Pointlike</i> conjunto de valores como del <i>Named</i> conjunto de valores.</p>
+                    <h3>Consecuencias de la tipificación estructural</h3>
+                    <p class="justificar">Los programadores de programación orientada a objetos a menudo se sorprenden por dos aspectos particulares de la tipificación estructural.</p>
+                    <h4>Tipos vacíos</h4>
+                    <p class="justificar">La primera es que el tipo vacío parece desafiar las expectativas:</p>
+                    <pre><code class="language-ts">class Empty {}
+ 
+function fn(arg: Empty) {
+    // do something?
+}
+                         
+// No error, but this isn't an 'Empty' ?
+    fn({ k: 10 });</code></pre>
+                    <p class="justificar">TypeScript determina si la llamada a <i>fn</i> aquí es válida al ver si el argumento proporcionado es válido <i>Empty</i>. Lo hace examinando la estructura de <i>{k:10}</i> y <i>class Empty { }</i>. Podemos ver que <i>{k:10}</i> tiene todas las propiedades que <i>Empty</i> tiene, porque <i>Empty</i> no tiene propiedades. Por lo tanto, ¡esta es una llamada válida!</p>
+                    <p class="justificar">Esto puede parecer sorprendente, pero en última instancia es una relación muy similar a la que se aplica en los lenguajes de programación orientada a objetos nominales. Una subclase no puede eliminar una propiedad de su clase base, porque hacerlo destruiría la relación de subtipo natural entre la clase derivada y su base. Los sistemas de tipos estructurales simplemente identifican implícitamente esta relación al describir subtipos en términos de tener propiedades de tipos compatibles.</p>
+                    <h4>Tipos idénticos</h4>
+                    <p class="justificar">Otra fuente frecuente de sorpresa viene con tipos idénticos:</p>
+                    <pre><code class="language-ts">class Car {
+    drive() {
+        // hit the gas
+    }
+}
+class Golfer {
+    drive() {
+        // hit the ball far
+    }
+}
+// No error?
+let w: Car = new Golfer();</code></pre>
+                    <p class="justificar">Nuevamente, esto no es un error porque las estructuras de estas clases son las mismas. Si bien esto puede parecer una fuente potencial de confusión, en la práctica, las clases idénticas que no deberían estar relacionadas no son comunes.</p>
+                    <h2>Tipo especial <i>any</i></h2>  
+                    <p class="justificar">TypeScript también tiene un tipo especial <i>any</i>, que puede usar siempre que no desee que un valor en particular cause errores de verificación de tipo.</p>
+                    <p class="justificar">Cuando un valor es de tipo <i>any</i>, puede acceder a cualquier propiedad del mismo (que a su vez será de tipo <i>any</i>), llamarlo como una función, asignarlo a (o desde) un valor de cualquier tipo, o prácticamente cualquier otra cosa que sea sintácticamente legal:</p>
+                    <pre><code class="language-ts">let obj: any = { x: 0 };
+// None of the following lines of code will throw compiler errors.
+// Using `any` disables all further type checking, and it is assumed 
+// you know the environment better than TypeScript.
+obj.foo();
+obj();
+obj.bar = 100;
+obj = "hello";
+const n: number = obj;</code></pre>
+                     <p class="justificar">El anytipo es útil cuando no desea escribir un tipo largo solo para convencer a TypeScript de que una línea de código en particular está bien.</p>
+                     <h4>Si deseas aprender más, puedes ver el siguiente video:</h4>
+                     <br>
+                     <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Kt5DLYeIwCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </article>
+
                 <article id="tab5">
-                    <h1>Curso Completo</h1>
+                    <h1 style="text-align: center;">Curso Completo Adicional</h1>
                     <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Xxqh0RoWxNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </article>
             </div>
         </div>
+
         <div style="background-color: #ffffff; height: 150px;"></div>
+        
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1" nonce="Tbk4f7L3"></script>
 
         <div class="fb-comments" data-href="https://github.com/MemoCJH/Etapa2ProyectoTPI115" data-width="100%" data-numposts="5"></div>
+
     </div>
+
     <div style="background-color: #c9e9fc; height: 50px;"></div>
+
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
