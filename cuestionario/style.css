@@ -8,7 +8,7 @@
 }
 
 body{
-    background: #007bff;
+    background: #c9e9fc;
 }
 
 ::selection{
@@ -337,6 +337,7 @@ footer button.show{
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
+    justify-content: center;
 }
 
 .result_box .score_text span p{
@@ -351,7 +352,7 @@ footer button.show{
 
 .result_box .buttons button{
     margin: 0 10px;
-    height: 45px;
+    height: 55px;
     padding: 0 20px;
     font-size: 18px;
     font-weight: 500;
@@ -375,6 +376,16 @@ footer button.show{
 .buttons button.quit{
     color: #007bff;
     background: #fff;
+}
+/* Nuevo: boton para pasar a la siguiente leccion */
+.buttons button.next_lec{
+    color: #007bff;
+    background: #fff;
+}
+
+.buttons button.next_lec:hover{
+    color: #fff;
+    background: #007bff;
 }
 
 .buttons a.quit{

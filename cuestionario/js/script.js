@@ -57,13 +57,13 @@ restart_quiz.onclick = ()=>{
     clearInterval(counterLine); //clear counterLine
     startTimer(timeValue); //calling startTimer function
     startTimerLine(widthValue); //calling startTimerLine function
-    timeText.textContent = "Time Left"; //change the text of timeText to Time Left
+    timeText.textContent = "Tiempo restante"; //change the text of timeText to Time Left
     next_btn.classList.remove("show"); //hide the next button
 }
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
-    window.location.reload(); //reload the current window
+    window.location.href = '../Templates/leccion6.html'; //Regresamos a la leccion6
 }
 
 const next_btn = document.querySelector("footer .next_btn");
@@ -80,7 +80,7 @@ next_btn.onclick = ()=>{
         clearInterval(counterLine); //clear counterLine
         startTimer(timeValue); //calling startTimer function
         startTimerLine(widthValue); //calling startTimerLine function
-        timeText.textContent = "Time Left"; //change the timeText to Time Left
+        timeText.textContent = "Tiempo restante"; //change the timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
     }else{
         clearInterval(counter); //clear counter
@@ -151,17 +151,17 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 3){ // if user scored more than 3
+    if (userScore == 5){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span> Felicidades 🎉, puntaje perfecto: <p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>'+'<span> Sigue así </span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if(userScore > 1){ // if user scored more than 1
-        let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+    else if(userScore > 2){ // if user scored more than 1
+        let scoreTag = '<span>Muy bien 😎, tu puntaje es:<p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>'+'<span> ¡Vamos!, Puedes Mejorar </span>';
         scoreText.innerHTML = scoreTag;
     }
     else{ // if user scored less than 1
-        let scoreTag = '<span>and sorry 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span> :( Tu puntaje es: <p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>'+'<span> Necesitas repasar, ¡Tú puedes! </span>';
         scoreText.innerHTML = scoreTag;
     }
 }
@@ -208,6 +208,6 @@ function startTimerLine(time){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
-    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    let totalQueCounTag = '<span><p>'+ index +'</p> de <p>'+ questions.length +'</p> preguntas </span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }

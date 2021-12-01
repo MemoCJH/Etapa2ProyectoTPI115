@@ -32,7 +32,7 @@
     <!-- Quiz Box -->
     <div class="quiz_box">
         <header>
-            <div class="title">Cuestionario - Lección 6</div>
+            <div class="title">Cuestionario - Lección 2</div>
             <div class="timer">
                 <div class="time_left_txt">Tiempo restante</div>
                 <div class="timer_sec">15</div>
@@ -68,15 +68,24 @@
         </div>
         <div class="buttons">
             <button class="restart">Resolver de nuevo</button>
-            <button class="quit">Salir</button>
+            <button style="display: none;" class="quit">Salir</button>
+            <button class="next_lec" >Siguiente leccion</button>
         </div>
     </div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="js/questions.js"></script>
+    <script src="js/preguntas_leccion2.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="js/script.js"></script>
+
+    <!-- Agregado -->
+    <script>
+        btn_next_leccion = document.querySelector('.next_lec')
+        btn_next_leccion.onclick = ()=>{
+            window.location.href='../Templates/leccion3.html';
+        }
+    </script>
 
 </body>
 </html>

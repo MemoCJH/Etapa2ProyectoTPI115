@@ -10,10 +10,12 @@
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="../javascript/temas.js"></script>
 </head>
 
 <body>
@@ -54,14 +56,17 @@
         <div class="row">
             <div class="col-sm-3 ">
                 <ul class="list-group">
-                    <li class="list-group-item">Tema 1</li>
-                    <li class="list-group-item"> Tema 2</li>
-                    <li class="list-group-item">Tema 3 </li>
+                    <li class="list-group-item"><a href="#tab1">Instalación y primer TypeScript</a> </li>
+                    <li class="list-group-item"> <a href="#tab2">Interfaces</a></li>
+                    <li class="list-group-item"> <a href="#tab3">Clases</a></li>
+                    <li class="list-group-item"> <a href="#tab4">Cuestionario</a></li>
+
                 </ul>
             </div>
 
-            <div class="col-sm-9">
-                <p>Comencemos construyendo una aplicación web simple con TypeScript.</p>
+            <div class="col-sm-9 secciones">
+                <article id="tab1">
+                    <p>Comencemos construyendo una aplicación web simple con TypeScript.</p>
                 <h2>Instalación de TypeScript</h2>
                 <p>Hay dos formas principales de hacer que TypeScript esté disponible para su proyecto:</p>
                 <ul>
@@ -131,10 +136,10 @@ document.body.textContent = greeter(user);
                 <p>Del mismo modo, intente eliminar todos los argumentos de la llamada de bienvenida. TypeScript le permitirá saber que ha llamado a esta función con un número inesperado de parámetros. En ambos casos, TypeScript puede ofrecer un análisis estático basado tanto en la estructura de su código como en las anotaciones de tipo que proporcione.</p>
 
                 <p>Observe que aunque hubo errores, el greeter.jsarchivo aún se crea. Puede usar TypeScript incluso si hay errores en su código. Pero en este caso, TypeScript advierte que su código probablemente no se ejecutará como se esperaba.</p>
-
-
-                <!-- ------------------------------------------------------------------- -->
-                <h2>Interfaces</h2>  
+                    
+                </article>
+                <article id="tab2">
+                    <h2>Interfaces</h2>  
                 <p>Desarrollemos más nuestra muestra. Aquí usamos una interfaz que describe objetos que tienen un campo de nombre y apellido. En TypeScript, dos tipos son compatibles si su estructura interna es compatible. Esto nos permite implementar una interfaz simplemente teniendo la forma que requiere la interfaz, sin una implementscláusula explícita .</p>
                 <pre><code class="language-ts">
 interface Person {
@@ -150,54 +155,65 @@ let user = { firstName: "Jane", lastName: "User" };
 
 document.body.textContent = greeter(user);
                 </code></pre>
-                <!-- ------------------------------------------------------------------- -->
+                </article>
+                 <article id="tab3">
+                    <h2>Clases</h2>
 
-                <h2>Clases</h2>
-
-                <p>Finalmente, ampliemos el ejemplo una última vez con clases. TypeScript admite nuevas funciones en JavaScript, como la compatibilidad con la programación orientada a objetos basada en clases.</p>
-                <p>Aquí vamos a crear una Studentclase con un constructor y algunos campos públicos. Observe que las clases y las interfaces funcionan bien juntas, lo que permite que el programador decida el nivel correcto de abstracción.</p>
-                <p>También es de destacar que el uso de publicargumentos on para el constructor es una forma abreviada que nos permite crear automáticamente propiedades con ese nombre</p>
-                <pre><code class="language-ts">   
-class Student {
-    fullName: string;
-    constructor(
-        public firstName: string,
-        public middleInitial: string,
-        public lastName: string
-    ) {
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
-    }
+                    <p>Finalmente, ampliemos el ejemplo una última vez con clases. TypeScript admite nuevas funciones en JavaScript, como la compatibilidad con la programación orientada a objetos basada en clases.</p>
+                    <p>Aquí vamos a crear una Studentclase con un constructor y algunos campos públicos. Observe que las clases y las interfaces funcionan bien juntas, lo que permite que el programador decida el nivel correcto de abstracción.</p>
+                    <p>También es de destacar que el uso de publicargumentos on para el constructor es una forma abreviada que nos permite crear automáticamente propiedades con ese nombre</p>
+                    <pre><code class="language-ts">   
+    class Student {
+        fullName: string;
+        constructor(
+            public firstName: string,
+            public middleInitial: string,
+            public lastName: string
+        ) {
+            this.fullName = firstName + " " + middleInitial + " " + lastName;
+        }
+        }
+        
+        interface Person {
+        firstName: string;
+        lastName: string;
+        }
+        
+        function greeter(person: Person) {
+        return "Hello, " + person.firstName + " " + person.lastName;
+        }
+        
+        let user = new Student("Jane", "M.", "User");
+        
+        document.body.textContent = greeter(user);
+                    </code></pre>
     
-    interface Person {
-    firstName: string;
-    lastName: string;
-    }
-    
-    function greeter(person: Person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-    }
-    
-    let user = new Student("Jane", "M.", "User");
-    
-    document.body.textContent = greeter(user);
-                </code></pre>
+                    <p>Vuelva a ejecutar tsc greeter.tsy verá que el JavaScript generado es el mismo que el código anterior. Las clases en TypeScript son solo una abreviatura del mismo OO basado en prototipos que se usa con frecuencia en JavaScript.</p> 
+                     
 
-                <p>Vuelva a ejecutar tsc greeter.tsy verá que el JavaScript generado es el mismo que el código anterior. Las clases en TypeScript son solo una abreviatura del mismo OO basado en prototipos que se usa con frecuencia en JavaScript.</p>
-
-                <p>Para poner a prueba tus conocimientos resuelva el siguiente cuestorionario</p>
-                <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a>
-
-
-
-
+                 </article> 
+                 <article id="tab4"> 
+                    <h2 style="text-align: center;">Pon a prueba los conocimientos adquiridos!</h2>
+                    <h3>Resuelve el siguiente Cuestionario</h3>
+                    <!-- <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a> -->
+                    <div class="ir_cuestionario">
+                        <button class="btn btn-primary btn-block btn_cuestionario"><i class="bi bi-card-checklist"></i>Resolver</button>
+                    </div>
+                 </article>  
             </div>
         </div>
     </div>
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
+    
     <script src="../estilos/prism/prism.js"></script>
+    <script>
+        btn_cuestionario = document.querySelector('.btn_cuestionario');
+        btn_cuestionario.onclick = ()=>{
+        window.location.href='../cuestionario/index.html';
+        }
+    </script>
 </body>
 
 </html>
