@@ -48,10 +48,10 @@
         </div>
     </nav>
 
-
+    <h1 style="text-align: center;" >Herramientas de TypeScript en 5 minutos</h1>
     <div class="container">
 
-        <h1 style="" >Herramientas de TypeScript en 5 minutos</h1>
+        
 
         <div class="row">
             <div class="col-sm-3 ">
@@ -66,7 +66,7 @@
 
             <div class="col-sm-9 secciones">
                 <article id="tab1">
-                    <p>Comencemos construyendo una aplicación web simple con TypeScript.</p>
+                    <p style="margin-top: 20px;">Comencemos construyendo una aplicación web simple con TypeScript.</p>
                 <h2>Instalación de TypeScript</h2>
                 <p>Hay dos formas principales de hacer que TypeScript esté disponible para su proyecto:</p>
                 <ul>
@@ -117,6 +117,20 @@ document.body.textContent = greeter(user);
                 <br>
 
                 <h2>Escribir anotaciones</h2>
+                <h3>¿Qué son las anotaciones en TypeScript?</h3>
+                <p>TypeScript usa anotaciones de tipo para especificar explícitamente tipos para identificadores como variables, funciones, objetos, etc. </p>
+                    
+                <p>TypeScript usa la sintaxis : typedespués de un identificador como la anotación de tipo, donde typepuede haber cualquier tipo válido.</p>  
+                    
+                <p>Una vez que un identificador está anotado con un tipo, solo se puede usar como ese tipo. Si el identificador se usa como un tipo diferente, el compilador de TypeScript emitirá un error.</p>
+                <br>
+                <h4>Ejemplo de anotaciones en TypeScript:</h4>
+                <pre><code class="language-typescript">   
+var age: number = 32; // number variable
+var name: string = "John";// string variable
+var isUpdated: boolean = true;// Boolean variable
+                </code></pre> 
+                <br>
                 <p>Las anotaciones de tipo en TypeScript son formas ligeras de registrar el contrato previsto de la función o variable. En este caso, pretendemos que se llame a la función de bienvenida con un solo parámetro de cadena. Podemos intentar cambiar el saludo de llamada para pasar una matriz en su lugar:</p>
                 <pre><code class="language-typescript">   
 function greeter(person: string) {
@@ -138,8 +152,13 @@ document.body.textContent = greeter(user);
                 <p>Observe que aunque hubo errores, el greeter.jsarchivo aún se crea. Puede usar TypeScript incluso si hay errores en su código. Pero en este caso, TypeScript advierte que su código probablemente no se ejecutará como se esperaba.</p>
                     
                 </article>
+                <!-- ---------------------------------------------------------------------------- -->
                 <article id="tab2">
-                    <h2>Interfaces</h2>  
+                <h2>Interfaces</h2>
+                <h3>Recordemos que es una interfaz</h3>
+                <p>Una interfaz es un contrato sintáctico que debe cumplir una entidad. En otras palabras, una interfaz define la sintaxis a la que debe adherirse cualquier entidad.</p>
+                <p>Las interfaces definen propiedades, métodos y eventos, que son los miembros de la interfaz. Las interfaces contienen solo la declaración de los miembros. Es responsabilidad de la clase derivada definir los miembros. A menudo ayuda a proporcionar una estructura estándar que seguirían las clases derivadas.</p>
+                <br>
                 <p>Desarrollemos más nuestra muestra. Aquí usamos una interfaz que describe objetos que tienen un campo de nombre y apellido. En TypeScript, dos tipos son compatibles si su estructura interna es compatible. Esto nos permite implementar una interfaz simplemente teniendo la forma que requiere la interfaz, sin una implementscláusula explícita .</p>
                 <pre><code class="language-ts">
 interface Person {
@@ -156,6 +175,7 @@ let user = { firstName: "Jane", lastName: "User" };
 document.body.textContent = greeter(user);
                 </code></pre>
                 </article>
+                <!-- ---------------------------------------------------------------------------- -->
                  <article id="tab3">
                     <h2>Clases</h2>
 
@@ -193,7 +213,7 @@ document.body.textContent = greeter(user);
 
                  </article> 
                  <article id="tab4"> 
-                    <h2 style="text-align: center;">Pon a prueba los conocimientos adquiridos!</h2>
+                    <h2 style="text-align: center;">¡Pon a prueba los conocimientos adquiridos!</h2>
                     <h3>Resuelve el siguiente Cuestionario</h3>
                     <!-- <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a> -->
                     <div class="ir_cuestionario">

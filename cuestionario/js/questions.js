@@ -2,59 +2,54 @@
 let questions = [
     {
     numb: 1,
-    question: "Esto es una prueba?",
-    answer: "d",
+    question: "Comando correcto para instalar Typescript por consola",
+    answer: "npm install -g typescript",
     options: [
-      "a",
-      "b",
-      "c",
-      "d"
+      "pip install typescript",
+      "apt-get install typescript",
+      "npm install -g typescript"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Una de las nuevas funcionalidades que admite Typescript es",
+    answer: "Uso de clases",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "Uso de variables",
+      "Uso de arreglos",
+      "Uso de clases"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Cual de los siguientes comandos permite compilar un programa typescript",
+    answer: "tsc miPrimerTS.ts",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "tsc miPrimerTS.ts",
+      "java miPrimerTS.ts",
+      "gcc miPrimerTS.ts"
     ]
   },
-    {
+  {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "Cual es un ejemplo de anotacion en Typescript",
+    answer: "var age: number = 32;",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "let edad = 5",
+      "var age = []",
+      "var age: number = 32;"
     ]
   },
-    {
+  {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "Que se define en una Interfaz",
+    answer: "Propiedades y métodos",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "Propiedades y métodos",
+      "Clases",
+      "Excepciones"
     ]
-  },
+  }
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
 
