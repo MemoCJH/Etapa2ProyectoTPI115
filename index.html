@@ -8,49 +8,66 @@
 		<meta name="Typescript" content="Curso de Typescript">
 		<meta name="TPI115" content="Proyecto de la materia TPI115">
 		<meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="../estilos/prism/prism.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<script src="../javascript/temas.js"></script>
 	
 	</head>
 	
 
 <body>
-	<div id="fb-root"></div>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="../images/typescript.png" alt="" width="34" height="34"></a>
 
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header"></div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Inicio</a></li>
-                <li><a href="Templates/leccion1.html">Lección 1</a></li>
-                <li><a href="Templates/leccion2.html">Lección 2</a></li>
-                <li><a href="Templates/leccion3.html">Lección 3</a></li>
-                <li><a href="Templates/leccion4.html">Lección 4</a></li>
-                <li><a href="Templates/leccion5.html">Lección 5</a></li>
-                <li><a href="Templates/leccion6.html">Lección 6</a></li>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion1.html">Lección 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Templates/leccion2.html">Lección 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion3.html">Lección 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion4.html">Lección 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion5.html">Lección 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion6.html">Lección 6</a>
+                </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search">
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.es/search">
                     <div class="form-group navegacion">
 
                         <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
-                        <input type=hidden name=sitesearch value="">
                     </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                    <img src="../images/typescript.png" alt="" width="34" height="34">
+                    <button type="submit" class="btn btn-success">Buscar</button>
                 </form>
 
             </ul>
         </div>
     </nav>
-
+	<div style="background-color: #c9e9fc; height: 20px;"></div>
 
 	<div class="container" style="padding: 20px; border-radius: 15px;">
 		<h3>Curso de Typescript</h3>
