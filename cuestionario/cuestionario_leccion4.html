@@ -53,7 +53,7 @@
             <div class="total_que">
                 <!-- Here I've inserted Question Count Number from JavaScript -->
             </div>
-            <button class="next_btn">Next Que</button>
+            <button class="next_btn">Siguiente</button>
         </footer>
     </div>
 
@@ -68,7 +68,8 @@
         </div>
         <div class="buttons">
             <button class="restart">Resolver de nuevo</button>
-            <button class="quit">Salir</button>
+            <button style="display: none;" class="quit">Salir</button>
+            <button class="next_lec" >Siguiente leccion</button>
         </div>
     </div>
 
@@ -77,6 +78,14 @@
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="js/script.js"></script>
+
+     <!-- Agregado -->
+     <script>
+        btn_next_leccion = document.querySelector('.next_lec')
+        btn_next_leccion.onclick = ()=>{
+            window.location.href='../Templates/leccion5.html';
+        }
+    </script>
 
 </body>
 </html>
