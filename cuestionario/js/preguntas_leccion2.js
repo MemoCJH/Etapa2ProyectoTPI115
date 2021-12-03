@@ -2,59 +2,40 @@
 let questions = [
     {
     numb: 1,
-    question: "Esto es una prueba LECCION2",
-    answer: "d",
+    question: "¿cómo se relaciona TypeScript con JavaScript?",
+    answer: "Sintaxis y Tipos",
     options: [
-      "a",
-      "b",
-      "c",
-      "d"
+      "Sintaxis y Tipos",
+      "Sintaxis y Diagramas"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "TypeScript no considera que ningún código JavaScript sea un error debido a su sintaxis",
+    answer: "Verdadero",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "Verdadero",
+      "Falso"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "TypeScript es un superconjunto escrito , lo que significa que no agrega reglas sobre cómo se pueden usar diferentes tipos de valores.",
+    answer: "Falso",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "Verdadero",
+      "Falso"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "¿Ambos lenguajes Typescript y Javascript se interelacionan entre si?",
+    answer: "Si",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "Si",
+      "No"
     ]
-  },
-    {
-    numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
-    options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
-    ]
-  },
+  }
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
 

@@ -2,59 +2,45 @@
 let questions = [
     {
     numb: 1,
-    question: "Esto es una prueba LECCION4",
-    answer: "d",
+    question: "¿Cómo se le conoce a Typescript?",
+    answer: "'superset' de Javascript",
     options: [
-      "a",
-      "b",
-      "c",
-      "d"
+      "'superset' de Javascript",
+      "plugin de Java",
+      "compilador de Node JS"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "¿Cómo se establece un tipo null en Typescript?",
+    answer: "let n: null = null",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "let n = null",
+      "let n = undefined",
+      "let n: null = null"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "¿Cuál es el modelo preferido para escribir programas en JavaScript?",
+    answer: "clases \"libres\"",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "asociasiones",
+      "clases \"libres\"",
+      "class struct"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "¿Cómo se representa any?",
+    answer: "let obj:any = {x:0};",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
+      "any = x",
+      "let obj:any = {x:0};",
+      "let any = 0ge",
       "Structured Query Language"
     ]
-  },
-    {
-    numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
-    options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
-    ]
-  },
+  }
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
 
