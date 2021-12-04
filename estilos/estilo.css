@@ -82,3 +82,11 @@ html{
 article {
 	scroll-behavior: smooth;
   }
+
+  .secciones .card a{text-decoration: none; color: white;}
+
+  .secciones .card a:hover {text-decoration: none; color: white;}
+
+  .card-header{background-color: #365b77;}
+
+  .card-body{background-color: #4da8cf;}
