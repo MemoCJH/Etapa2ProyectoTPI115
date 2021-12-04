@@ -61,7 +61,3 @@ html{
 	margin: 0 auto;
 	margin-bottom: 10px;
 }
-
-article {
-	scroll-behavior: smooth;
-  }

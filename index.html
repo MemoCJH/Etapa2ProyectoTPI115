@@ -1,58 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-	<title>Inicio - Typescript</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link href="estilos/estilo.css" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+	<head>
+		<title>Leccion 2 - Typescript</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Typescript" content="Curso de Typescript">
+		<meta name="TPI115" content="Proyecto de la materia TPI115">
+		<meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../estilos/prism/prism.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="../javascript/temas.js"></script>
+	
+	</head>
+	
 
 <body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="../images/typescript.png" alt="" width="34" height="34"></a>
 
-	<nav class="navbar navbar-inverse ">
-		<div class="container-fluid">
-			<div class="navbar-header"></div>
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Inicio</a></li>
-				<li><a href="Templates/leccion1.html">Lección 1</a></li>
-				<li><a href="Templates/leccion2.html">Lección 2</a></li>
-				<li><a href="Templates/leccion3.html">Lección 3</a></li>
-				<li><a href="Templates/leccion4.html">Lección 4</a></li>
-				<li><a href="Templates/leccion5.html">Lección 5</a></li>
-				<li><a href="Templates/leccion6.html">Lección 6</a></li>
-			</ul>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-			<ul class="nav navbar-nav navbar-right">
-				<form class="navbar-form navbar-left" action="/action_page.php">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Tema a buscar" name="search">
-					</div>
-					<button type="submit" class="btn btn-default">Buscar</button>
-					<img src="images/typescript.png" alt="" width="34" height="34">
-				</form>
-			</ul>
-		</div>
-	</nav>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion1.html">Lección 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="Templates/leccion2.html">Lección 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion3.html">Lección 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion4.html">Lección 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion5.html">Lección 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Templates/leccion6.html">Lección 6</a>
+                </li>
+            </ul>
 
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.es/search">
+                    <div class="form-group navegacion">
 
-	<div class="container">
+                        <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
+                    </div>
+                    <button type="submit" class="btn btn-success">Buscar</button>
+                </form>
+
+            </ul>
+        </div>
+    </nav>
+	<div style="background-color: #c9e9fc; height: 20px;"></div>
+
+	<div class="container" style="padding: 20px; border-radius: 15px;">
 		<h3>Curso de Typescript</h3>
 		<img src="images/typescript.png" alt="" class="centrar">
-		<p class="justificar">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae architecto assumenda vitae
-		voluptatem fugiat asperiores odit optio voluptas distinctio quod facilis earum voluptates corporis ratione
-		dolores eius, excepturi laudantium. <br>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga repellendus debitis velit corporis
-		optio suscipit odit nobis ipsa, consequuntur quisquam deserunt maxime, nulla ullam culpa quasi aperiam
-		voluptatibus distinctio.</p>
+		<br><br>
+		<h4 class="justificar">Felicitaciones por elegir TypeScript como uno de sus primeros idiomas; ¡ya está tomando
+			buenas decisiones!<br>
 
-	</div>
-    <div id="inferior">
-        <p>Autores: Grupo 07 de TPI115 - UES</p>
-    </div>
+			Probablemente ya haya escuchado que TypeScript es un "sabor" o "variante" de JavaScript. La relación entre
+			TypeScript (TS) y JavaScript (JS) es bastante única entre los lenguajes de programación modernos, por lo que
+			aprender más sobre esta relación lo ayudará a comprender cómo se agrega TypeScript a JavaScript.</h4>
+
+			<div style="background-color: #ffffff; height: 150px;"></div>
+	
+			<script async defer crossorigin="anonymous"
+				src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1"
+				nonce="Tbk4f7L3"></script>
+		
+			<div class="fb-comments" data-href="https://github.com/MemoCJH/Etapa2ProyectoTPI115" data-width="100%"
+				data-numposts="5"></div>
+		</div>
+	
+
+</div>
+
+<div style="background-color: #c9e9fc; height: 50px;"></div>
+
+<div id="inferior">
+	<p>Autores: Grupo 07 de TPI115 - UES</p>
+</div>
+
+<script src="../estilos/prism/prism.js"></script>
+
 </body>
 
 </html>
