@@ -72,6 +72,9 @@
     </nav>
     <div style="background-color: #c9e9fc; height: 20px;"></div>
 
+    <div class="container borde" style="text-align: center;">
+        <h1>TypeScript para el nuevo programador</h1>
+    </div>
 
     <div class="container">
 
@@ -88,33 +91,46 @@
 
             <div class="secciones col-sm-9">
                 <article id="tab1">
-                    <h1>TypeScript para programadores de JavaScript</h1>
-                    <p>TypeScript tiene una relación inusual con JavaScript. 
-                        TypeScript ofrece todas las funciones de JavaScript y una capa adicional además de estas: el sistema de tipos de TypeScript.
+                    <br>
+                    <p>TypeScript tiene una relación inusual con JavaScript.
+                        TypeScript ofrece todas las funciones de JavaScript y una capa adicional además de estas: el
+                        sistema de tipos de TypeScript.
                     </p>
                     <p>
-                        Por ejemplo, JavaScript proporciona primitivas de lenguaje como string y number, pero no verifica que las haya asignado de manera consistente. TypeScript lo hace.
+                        Por ejemplo, JavaScript proporciona primitivas de lenguaje como string y number, pero no
+                        verifica que las haya asignado de manera consistente. TypeScript lo hace.
                     </p>
-                    
+
                 </article>
                 <article id="tab2">
                     <h1>Tipos por inferencia</h1>
                     <p>
-                        TypeScript conoce el lenguaje JavaScript y generará tipos por ti en muchos casos.Por ejemplo,al crear una variable y asignarle un valor determinado,TypeScript utilizará el valor como su tipo.
+                        TypeScript conoce el lenguaje JavaScript y generará tipos por ti en muchos casos.Por ejemplo,al
+                        crear una variable y asignarle un valor determinado,TypeScript utilizará el valor como su tipo.
                     </p>
                     <pre><code class="language-ts">   
                             let helloWorld = "Hello World";
                     </code></pre>
                     <p>
-                        Al comprender cómo funciona JavaScript, TypeScript puede construir un sistema de tipos que acepta código JavaScript pero tiene tipos. Esto ofrece un sistema de tipos sin necesidad de agregar caracteres adicionales para hacer que los tipos sean explícitos en su código. Así es como TypeScript sabe que helloWorld es una string en el ejemplo anterior.
-                        Es posible que haya escrito JavaScript en Visual Studio Code,y que haya tenido el autocompletado del editor.Visual Studio Code utiliza TypeScript bajo el capó para facilitar el trabajo con JavaScript.
+                        Al comprender cómo funciona JavaScript, TypeScript puede construir un sistema de tipos que
+                        acepta código JavaScript pero tiene tipos. Esto ofrece un sistema de tipos sin necesidad de
+                        agregar caracteres adicionales para hacer que los tipos sean explícitos en su código. Así es
+                        como TypeScript sabe que helloWorld es una string en el ejemplo anterior.
+                        Es posible que haya escrito JavaScript en Visual Studio Code,y que haya tenido el autocompletado
+                        del editor.Visual Studio Code utiliza TypeScript bajo el capó para facilitar el trabajo con
+                        JavaScript.
                     </p>
                 </article>
                 <article id="tab3">
                     <h1>Definiendo tipos</h1>
                     <p>
-                        Se puede utilizar una gran variedad de patrones de diseño en JavaScript.Sin embargo,algunos patrones de diseño dificultan que los tipos se infieran automáticamente (por ejemplo,los patrones que utilizan programación dinámica).Para cubrir estos casos,TypeScript soporta una extensión del lenguaje JavaScript,que ofrece lugares para que le digas a TypeScript cuáles deben ser los tipos.
-                        Por ejemplo, para crear un objeto con un tipo inferido que incluye name: string e id: number , puede escribir:
+                        Se puede utilizar una gran variedad de patrones de diseño en JavaScript.Sin embargo,algunos
+                        patrones de diseño dificultan que los tipos se infieran automáticamente (por ejemplo,los
+                        patrones que utilizan programación dinámica).Para cubrir estos casos,TypeScript soporta una
+                        extensión del lenguaje JavaScript,que ofrece lugares para que le digas a TypeScript cuáles deben
+                        ser los tipos.
+                        Por ejemplo, para crear un objeto con un tipo inferido que incluye name: string e id: number ,
+                        puede escribir:
                     </p>
                     <pre><code class="language-ts">   
                             const user = {
@@ -132,7 +148,8 @@
                               }
                     </code></pre>
                     <p>
-                        Luego puede declarar que un objeto JavaScript se ajusta a la forma de su nueva interface usando una sintaxis como : TypeName después de una declaración de variable:
+                        Luego puede declarar que un objeto JavaScript se ajusta a la forma de su nueva interface usando
+                        una sintaxis como : TypeName después de una declaración de variable:
                     </p>
                     <pre><code class="language-ts">   
                             const user: User = {
@@ -141,7 +158,8 @@
                               };
                     </code></pre>
                     <p>
-                        Si proporciona un objeto que no coincide con la interfaz que ha proporcionado, TypeScript le advertirá:
+                        Si proporciona un objeto que no coincide con la interfaz que ha proporcionado, TypeScript le
+                        advertirá:
                     </p>
                     <pre><code class="language-ts">   
                             interface User {
@@ -155,7 +173,8 @@
                               };
                     </code></pre>
                     <p>
-                        Dado que JavaScript soporta clases y programación orientada a objetos,también lo hace TypeScript.Puedes usar una declaración de interfaz con clases:
+                        Dado que JavaScript soporta clases y programación orientada a objetos,también lo hace
+                        TypeScript.Puedes usar una declaración de interfaz con clases:
                     </p>
                     <pre><code class="language-ts">   
                             interface User {
@@ -176,7 +195,8 @@
                               const user: User = new UserAccount("Murphy", 1);
                     </code></pre>
                     <p>
-                        Puede utilizar las interfaces para anotar los parámetros y los valores de retorno de las funciones:
+                        Puede utilizar las interfaces para anotar los parámetros y los valores de retorno de las
+                        funciones:
                     </p>
                     <pre><code class="language-ts">   
                             function getAdminUser(): User {
@@ -188,22 +208,29 @@
                               }
                     </code></pre>
                     <p>
-                        Ya existe un pequeño conjunto de tipos primitivos disponibles en JavaScript: boolean , bigint , null , number , string , symbol e undefined , que puede usar en una interfaz. TypeScript amplía esta lista con algunos más, como any (permitir cualquier cosa), unknown (asegúrese de que alguien que usa este tipo declare cuál es el tipo), never (no es posible que este tipo pueda suceder) y void (una función que devuelve undefined o no tiene valor de retorno).
+                        Ya existe un pequeño conjunto de tipos primitivos disponibles en JavaScript: boolean , bigint ,
+                        null , number , string , symbol e undefined , que puede usar en una interfaz. TypeScript amplía
+                        esta lista con algunos más, como any (permitir cualquier cosa), unknown (asegúrese de que
+                        alguien que usa este tipo declare cuál es el tipo), never (no es posible que este tipo pueda
+                        suceder) y void (una función que devuelve undefined o no tiene valor de retorno).
                     </p>
                     <p>
-                        Verá que hay dos sintaxis para los tipos de construcción: interfaces y tipos . Debería preferir la interface . Utilice la type cuando necesite funciones específicas.
+                        Verá que hay dos sintaxis para los tipos de construcción: interfaces y tipos . Debería preferir
+                        la interface . Utilice la type cuando necesite funciones específicas.
                     </p>
                 </article>
                 <article id="tab4">
                     <h1>Tipos de composición</h1>
                     <p>
-                        Con TypeScript,puedes crear tipos complejos combinando tipos simples.Hay dos formas populares de hacerlo:con uniones y con genéricos.
+                        Con TypeScript,puedes crear tipos complejos combinando tipos simples.Hay dos formas populares de
+                        hacerlo:con uniones y con genéricos.
                     </p>
                     <p>
-                        <h2>
-                            Union
-                        </h2>
-                        Con una unión, puede declarar que un tipo podría ser uno de muchos tipos. Por ejemplo, puede describir un tipo boolean o como true o false :
+                    <h2>
+                        Union
+                    </h2>
+                    Con una unión, puede declarar que un tipo podría ser uno de muchos tipos. Por ejemplo, puede
+                    describir un tipo boolean o como true o false :
                     </p>
                     <pre><code class="language-ts">   
                             type MyBool = true | false;
@@ -227,10 +254,12 @@
                               }
                     </code></pre>
                     <p>
-                        <h2>
-                            Genericos
-                        </h2>
-                        Los genéricos proporcionan variables a los tipos.Un ejemplo común es un array.Un array sin genéricos puede contener cualquier cosa.Un array con genéricos puede describir los valores que contiene el array.
+                    <h2>
+                        Genericos
+                    </h2>
+                    Los genéricos proporcionan variables a los tipos.Un ejemplo común es un array.Un array sin genéricos
+                    puede contener cualquier cosa.Un array con genéricos puede describir los valores que contiene el
+                    array.
                     </p>
                     <pre><code class="language-ts">   
                             type StringArray = Array<string>;
@@ -240,9 +269,12 @@
                 </article>
                 <article id="tab5">
                     <h1>Sistema de tipo estructural</h1>
-                    <p>Uno de los principios básicos de TypeScript es que la verificación de tipos se centra en la forma que tienen los valores. A esto a veces se le llama "tipificación de pato" o "tipificación estructural".
-                        En un sistema de tipo estructural,si dos objetos tienen la misma forma,se considera que son del mismo tipo.</p>
-                        <pre><code class="language-ts">   
+                    <p>Uno de los principios básicos de TypeScript es que la verificación de tipos se centra en la forma
+                        que tienen los valores. A esto a veces se le llama "tipificación de pato" o "tipificación
+                        estructural".
+                        En un sistema de tipo estructural,si dos objetos tienen la misma forma,se considera que son del
+                        mismo tipo.</p>
+                    <pre><code class="language-ts">   
                                 interface Point {
                                     x: number;
                                     y: number;
@@ -256,8 +288,9 @@
                                   const point = { x: 12, y: 26 };
                                   logPoint(point);
                         </code></pre>
-                       
-                    <p>Si el objeto o la clase tiene todas las propiedades requeridas,TypeScript dirá que coinciden,independientemente de los detalles de la implementación.</p>
+
+                    <p>Si el objeto o la clase tiene todas las propiedades requeridas,TypeScript dirá que
+                        coinciden,independientemente de los detalles de la implementación.</p>
                     <pre><code class="language-ts">   
                             class VirtualPoint {
                                 x: number;
@@ -273,9 +306,9 @@
                               logPoint(newVPoint); // registra "13, 56"
                     </code></pre>
                 </article>
+            </div>
         </div>
-    </div>
-    <div style="background-color: #ffffff; height: 150px;"></div>
+        <div style="background-color: #ffffff; height: 150px;"></div>
 
         <script async defer crossorigin="anonymous"
             src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1"
