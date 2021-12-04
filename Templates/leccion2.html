@@ -84,6 +84,7 @@
                     <li class="list-group-item"><a href="#tab1">¿Qué es Javascript?</a></li>
                     <li class="list-group-item"><a href="#tab2">Un verificador de tipo estático</a></li>
                     <li class="list-group-item"><a href="#tab3">Aprendiendo JavaScript y TypeScript</a></li>
+                    <li class="list-group-item"><a href="#tab4">Cuestionario</a></li>
                  </ul>
             </div>
             <div class="secciones col-sm-9">
@@ -264,6 +265,14 @@
                         realizar tareas en tiempo de ejecución.
                     </p>
                 </article>
+                <article id="tab4">
+                    <h2 style="text-align: center;">¡Pon a prueba los conocimientos adquiridos!</h2>
+                    <h3>Resuelve el siguiente Cuestionario</h3>
+                    <!-- <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a> -->
+                    <div class="ir_cuestionario">
+                        <button class="btn btn-primary btn-block btn_cuestionario"><i class="bi bi-card-checklist"></i>Resolver</button>
+                    </div>
+                </article>
                 
             </div>
         </div>
@@ -286,6 +295,13 @@
     </div>
 
     <script src="../estilos/prism/prism.js"></script>
+
+    <script>
+        btn_cuestionario = document.querySelector('.btn_cuestionario');
+        btn_cuestionario.onclick = ()=>{
+        window.location.href='../cuestionario/cuestionario_leccion2.html';
+        }
+    </script>
 
 
 </body>

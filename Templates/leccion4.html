@@ -85,6 +85,7 @@
                     <li class="list-group-item"><a href="#tab3">Repensando el concepto de clases</a></li>
                     <li class="list-group-item"><a href="#tab4">Repensando los tipos</a></li>
                     <li class="list-group-item"><a href="#tab5">Más...</a></li>
+                    <li class="list-group-item"><a href="#tab6">Cuestionario</a></li>
                 </ul>
             </div>
             <div class="secciones col-sm-9">
@@ -347,6 +348,15 @@ const n: number = obj;</code></pre>
                     <h1 style="text-align: center;">Curso Completo Adicional</h1>
                     <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Xxqh0RoWxNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </article>
+
+                <article id="tab6">
+                    <h2 style="text-align: center;">¡Pon a prueba los conocimientos adquiridos!</h2>
+                    <h3>Resuelve el siguiente Cuestionario</h3>
+                    <!-- <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a> -->
+                    <div class="ir_cuestionario">
+                        <button class="btn btn-primary btn-block btn_cuestionario"><i class="bi bi-card-checklist"></i>Resolver</button>
+                    </div>
+                </article>
             </div>
         </div>
 
@@ -364,6 +374,13 @@ const n: number = obj;</code></pre>
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
     <script src="../estilos/prism/prism.js"></script>
+
+    <script>
+        btn_cuestionario = document.querySelector('.btn_cuestionario');
+        btn_cuestionario.onclick = ()=>{
+        window.location.href='../cuestionario/cuestionario_leccion4.html';
+        }
+    </script>
 </body>
 
 </html>
