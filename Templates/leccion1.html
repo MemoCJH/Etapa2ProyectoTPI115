@@ -8,50 +8,72 @@
     <meta name="Typescript" content="Curso de Typescript">
     <meta name="TPI115" content="Proyecto de la materia TPI115">
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../estilos/prism/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../javascript/temas.js"></script>
 
 </head>
 
 <body>
 
-    <div id="fb-root"></div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="../images/typescript.png" alt="" width="34" height="34"></a>
 
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header"></div>
-            <ul class="nav navbar-nav">
-                <li><a href="../index.html">Inicio</a></li>
-                <li class="active"><a href="leccion1.html">Lección 1</a></li>
-                <li><a href="leccion2.html">Lección 2</a></li>
-                <li><a href="leccion3.html">Lección 3</a></li>
-                <li><a href="leccion4.html">Lección 4</a></li>
-                <li><a href="leccion5.html">Lección 5</a></li>
-                <li><a href="leccion6.html">Lección 6</a></li>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="leccion1.html">Lección 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion2.html">Lección 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion3.html">Lección 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion4.html">Lección 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion5.html">Lección 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion6.html">Lección 6</a>
+                </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search">
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.es/search">
                     <div class="form-group navegacion">
 
                         <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
-                        <input type=hidden name=sitesearch value="">
                     </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                    <img src="../images/typescript.png" alt="" width="34" height="34">
+                    <button type="submit" class="btn btn-success">Buscar</button>
                 </form>
 
             </ul>
         </div>
     </nav>
+    <div style="background-color: #c9e9fc; height: 20px;"></div>
 
-    <h1 style="text-align: center;" class="borde">Lo que debes saber antes de iniciar con TypeScript</h1>
+    <div class="container borde" style="text-align: center;">
+        <h1>Lo que debes saber antes de iniciar con TypeScript</h1>
+    </div>
+
     <div class="container" style="padding: 20px; border-radius: 15px;">
 
         <div class="row">
@@ -61,7 +83,7 @@
                     <li class="list-group-item"><a href="#tab2">Diferencias entre TypeScript y JavaScript</a></li>
                     <li class="list-group-item"><a href="#tab3">Ventajas de usar este lenguaje de programación</a></li>
                     <li class="list-group-item"><a href="#tab4">¿Utilizar TS o JS?</a></li>
-                    <li class="list-group-item"><a href="#tab5">Más...</a></li>
+                    <li class="list-group-item"><a href="#tab5">Empieza Ahora</a></li>
                 </ul>
             </div>
             <div class="secciones col-sm-9">
@@ -106,20 +128,44 @@
                     otraVariable2 = "Profile Software Service";
                     </code></pre>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2>Comparación entre JavaScript y TypeScript</h2>
+					
+					<table border="3" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><strong>Javascript</strong></td>
+      <td align="center" valign="middle"><strong>Typescript</strong></td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">Lenguaje de scripting orientado a objetos</td>
+      <td align="left" valign="middle">Lenguaje de scripting orientado a objetos</td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">Puede ser interpretado y ejecutado</td>
+      <td align="left" valign="middle">Compila a Javascript</td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">Lenguaje interpretado, ejecutado directamente en un navegador</td>
+      <td align="left" valign="middle">Lenguaje interpretado, ejecutado directamente en un navegador</td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">Dinamicamente tipado</td>
+      <td align="left" valign="middle">Puede ser estáticamente tipado</td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">Más flexible</td>
+      <td align="left" valign="middle">Mejor estructurado</td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">Bueno para proyectos pequeños y simples</td>
+      <td align="left" valign="middle">Ideal para proyectos complejos</td>
+    </tr>
+  </tbody>
+</table>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </article>
+<p>Typecript proporciona mecanografía, clases e interfaz estáticas opcionales. Para un gran proyecto de JavaScript, la adopción de TypeScript puede brindarle un software más sólido y fácil de implementar con una aplicación de JavaScript normal.</p>
+                    
+              </article>
                 <article id="tab3">
                     <h1>Ventajas de usar este lenguaje de programación</h1>
                     <ul>
@@ -213,7 +259,21 @@
                     </p>
                 </article>
                 <article id="tab5">
-                    <h1>5</h1>
+                    <h1>Empieza Ahora</h1>
+
+                    <p>Typescript se está convirtiendo en una opción fácil para las compañías que quieran desarrollar proyectos con mucho código. La estructura de los lenguajes de programación orientada a objetos mantiene un código limpio, escalable, consistente y fácil de debuggear.</p>
+
+                    <p>A continuación se presenta diferentes fuentes de información que le serán utiles para reforzar sus conocimientos</p>
+
+                    <h3>¿Qué es Typescript y porqué aprenderlo? por Fazt</h3>
+                    <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/wXBl5tZm-OQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+                    <h3>Curso Práctico desde Cero por Ricardo Morales</h3>
+                    <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/8fnhN1HRPB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+                    <h3>Tutorial de TypeScript por iSolution</h3>
+                    <p align="center"><a href="https://isolution.pro/es/t/typescript?alias=tutorial-de-typescript" target="_blank">clic aquí</a></p>
+
                 </article>
             </div>
         </div>

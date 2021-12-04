@@ -59,7 +59,6 @@ html{
 	border-color: rgb(1, 116, 145);
     border-width: 5px;
     border-style: solid;
-	width: 1174px;
 	margin: 0 auto;
 	margin-bottom: 10px;
 }
@@ -81,3 +80,6 @@ html{
 	margin-right: 7px;
 	
 }
+article {
+	scroll-behavior: smooth;
+  }
