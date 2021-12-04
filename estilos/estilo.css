@@ -61,3 +61,24 @@ html{
 	margin: 0 auto;
 	margin-bottom: 10px;
 }
+
+.secciones article .ir_cuestionario{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 25px;
+}
+.secciones article .ir_cuestionario button{
+	width: 200px;
+	height: 45px;
+
+}
+
+.secciones article .ir_cuestionario button i{
+	font-size: 18px;
+	margin-right: 7px;
+	
+}
+article {
+	scroll-behavior: smooth;
+  }

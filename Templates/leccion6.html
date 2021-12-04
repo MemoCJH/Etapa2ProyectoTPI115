@@ -8,60 +8,86 @@
     <meta name="Typescript" content="Curso de Typescript">
     <meta name="TPI115" content="Proyecto de la materia TPI115">
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"><!-- Iconos Bootstrap -->
     <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <sc<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/temas.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse ">
-        <div class="container-fluid">
-            <div class="navbar-header"></div>
-            <ul class="nav navbar-nav">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="leccion1.html">Lección 1</a></li>
-                <li><a href="leccion2.html">Lección 2</a></li>
-                <li><a href="leccion3.html">Lección 3</a></li>
-                <li><a href="leccion4.html">Lección 4</a></li>
-                <li><a href="leccion5.html">Lección 5</a></li>
-                <li class="active"><a href="leccion6.html">Lección 6</a></li>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="../images/typescript.png" alt="" width="34" height="34"></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="leccion1.html">Lección 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion2.html">Lección 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion3.html">Lección 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion4.html">Lección 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion5.html">Lección 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion6.html">Lección 6</a>
+                </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search" >
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.es/search">
                     <div class="form-group navegacion">
-                       
+
                         <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
-                        <input type=hidden name=sitesearch value="">
                     </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                    <img src="../images/typescript.png" alt="" width="34" height="34">
+                    <button type="submit" class="btn btn-success">Buscar</button>
                 </form>
-                
+
             </ul>
         </div>
     </nav>
+    <div style="background-color: #c9e9fc; height: 20px;"></div>
 
-
+    <h1 style="text-align: center;" >Herramientas de TypeScript en 5 minutos</h1>
     <div class="container">
 
-        <h1 style="" >Herramientas de TypeScript en 5 minutos</h1>
+        
 
         <div class="row">
-            <div class="col-sm-3 ">
+            <div class="col-sm-3" style="padding-top: 20px;">
                 <ul class="list-group">
-                    <li class="list-group-item">tema 1</li>
-                    <li class="list-group-item">tema 2</li>
-                    <li class="list-group-item">tema 3</li>
+                    <li class="list-group-item"><a href="#tab1">Instalación y primer TypeScript</a> </li>
+                    <li class="list-group-item"> <a href="#tab2">Interfaces</a></li>
+                    <li class="list-group-item"> <a href="#tab3">Clases</a></li>
+                    <li class="list-group-item"> <a href="#tab4">Cuestionario</a></li>
+
                 </ul>
             </div>
 
-            <div class="col-sm-9">
-                <p>Comencemos construyendo una aplicación web simple con TypeScript.</p>
+            <div class="col-sm-9 secciones">
+                <article id="tab1">
+                    <p style="margin-top: 20px;">Comencemos construyendo una aplicación web simple con TypeScript.</p>
                 <h2>Instalación de TypeScript</h2>
                 <p>Hay dos formas principales de hacer que TypeScript esté disponible para su proyecto:</p>
                 <ul>
@@ -112,6 +138,20 @@ document.body.textContent = greeter(user);
                 <br>
 
                 <h2>Escribir anotaciones</h2>
+                <h3>¿Qué son las anotaciones en TypeScript?</h3>
+                <p>TypeScript usa anotaciones de tipo para especificar explícitamente tipos para identificadores como variables, funciones, objetos, etc. </p>
+                    
+                <p>TypeScript usa la sintaxis : typedespués de un identificador como la anotación de tipo, donde typepuede haber cualquier tipo válido.</p>  
+                    
+                <p>Una vez que un identificador está anotado con un tipo, solo se puede usar como ese tipo. Si el identificador se usa como un tipo diferente, el compilador de TypeScript emitirá un error.</p>
+                <br>
+                <h4>Ejemplo de anotaciones en TypeScript:</h4>
+                <pre><code class="language-typescript">   
+var age: number = 32; // number variable
+var name: string = "John";// string variable
+var isUpdated: boolean = true;// Boolean variable
+                </code></pre> 
+                <br>
                 <p>Las anotaciones de tipo en TypeScript son formas ligeras de registrar el contrato previsto de la función o variable. En este caso, pretendemos que se llame a la función de bienvenida con un solo parámetro de cadena. Podemos intentar cambiar el saludo de llamada para pasar una matriz en su lugar:</p>
                 <pre><code class="language-typescript">   
 function greeter(person: string) {
@@ -131,10 +171,15 @@ document.body.textContent = greeter(user);
                 <p>Del mismo modo, intente eliminar todos los argumentos de la llamada de bienvenida. TypeScript le permitirá saber que ha llamado a esta función con un número inesperado de parámetros. En ambos casos, TypeScript puede ofrecer un análisis estático basado tanto en la estructura de su código como en las anotaciones de tipo que proporcione.</p>
 
                 <p>Observe que aunque hubo errores, el greeter.jsarchivo aún se crea. Puede usar TypeScript incluso si hay errores en su código. Pero en este caso, TypeScript advierte que su código probablemente no se ejecutará como se esperaba.</p>
-
-                <!-- ------------------------------------------------------------------- -->
-                <br><br>
-                <h2>Interfaces</h2>  
+                    
+                </article>
+                <!-- ---------------------------------------------------------------------------- -->
+                <article id="tab2">
+                <h2>Interfaces</h2>
+                <h3>Recordemos que es una interfaz</h3>
+                <p>Una interfaz es un contrato sintáctico que debe cumplir una entidad. En otras palabras, una interfaz define la sintaxis a la que debe adherirse cualquier entidad.</p>
+                <p>Las interfaces definen propiedades, métodos y eventos, que son los miembros de la interfaz. Las interfaces contienen solo la declaración de los miembros. Es responsabilidad de la clase derivada definir los miembros. A menudo ayuda a proporcionar una estructura estándar que seguirían las clases derivadas.</p>
+                <br>
                 <p>Desarrollemos más nuestra muestra. Aquí usamos una interfaz que describe objetos que tienen un campo de nombre y apellido. En TypeScript, dos tipos son compatibles si su estructura interna es compatible. Esto nos permite implementar una interfaz simplemente teniendo la forma que requiere la interfaz, sin una implementscláusula explícita .</p>
                 <pre><code class="language-ts">
 interface Person {
@@ -150,51 +195,66 @@ let user = { firstName: "Jane", lastName: "User" };
 
 document.body.textContent = greeter(user);
                 </code></pre>
-                <!-- ------------------------------------------------------------------- -->
-                <br>
-                <h2>Clases</h2>
+                </article>
+                <!-- ---------------------------------------------------------------------------- -->
+                 <article id="tab3">
+                    <h2>Clases</h2>
 
-                <p>Finalmente, ampliemos el ejemplo una última vez con clases. TypeScript admite nuevas funciones en JavaScript, como la compatibilidad con la programación orientada a objetos basada en clases.</p>
-                <p>Aquí vamos a crear una Studentclase con un constructor y algunos campos públicos. Observe que las clases y las interfaces funcionan bien juntas, lo que permite que el programador decida el nivel correcto de abstracción.</p>
-                <p>También es de destacar que el uso de publicargumentos on para el constructor es una forma abreviada que nos permite crear automáticamente propiedades con ese nombre</p>
-                <pre><code class="language-ts">   
-class Student {
-    fullName: string;
-    constructor(
-        public firstName: string,
-        public middleInitial: string,
-        public lastName: string
-    ) {
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
-    }
+                    <p>Finalmente, ampliemos el ejemplo una última vez con clases. TypeScript admite nuevas funciones en JavaScript, como la compatibilidad con la programación orientada a objetos basada en clases.</p>
+                    <p>Aquí vamos a crear una Studentclase con un constructor y algunos campos públicos. Observe que las clases y las interfaces funcionan bien juntas, lo que permite que el programador decida el nivel correcto de abstracción.</p>
+                    <p>También es de destacar que el uso de publicargumentos on para el constructor es una forma abreviada que nos permite crear automáticamente propiedades con ese nombre</p>
+                    <pre><code class="language-ts">   
+    class Student {
+        fullName: string;
+        constructor(
+            public firstName: string,
+            public middleInitial: string,
+            public lastName: string
+        ) {
+            this.fullName = firstName + " " + middleInitial + " " + lastName;
+        }
+        }
+        
+        interface Person {
+        firstName: string;
+        lastName: string;
+        }
+        
+        function greeter(person: Person) {
+        return "Hello, " + person.firstName + " " + person.lastName;
+        }
+        
+        let user = new Student("Jane", "M.", "User");
+        
+        document.body.textContent = greeter(user);
+                    </code></pre>
     
-    interface Person {
-    firstName: string;
-    lastName: string;
-    }
-    
-    function greeter(person: Person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-    }
-    
-    let user = new Student("Jane", "M.", "User");
-    
-    document.body.textContent = greeter(user);
-                </code></pre>
+                    <p>Vuelva a ejecutar tsc greeter.tsy verá que el JavaScript generado es el mismo que el código anterior. Las clases en TypeScript son solo una abreviatura del mismo OO basado en prototipos que se usa con frecuencia en JavaScript.</p> 
+                     
 
-                <p>Vuelva a ejecutar tsc greeter.tsy verá que el JavaScript generado es el mismo que el código anterior. Las clases en TypeScript son solo una abreviatura del mismo OO basado en prototipos que se usa con frecuencia en JavaScript.</p>
-
-
-
-
+                 </article> 
+                 <article id="tab4"> 
+                    <h2 style="text-align: center;">¡Pon a prueba los conocimientos adquiridos!</h2>
+                    <h3>Resuelve el siguiente Cuestionario</h3>
+                    <!-- <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a> -->
+                    <div class="ir_cuestionario">
+                        <button class="btn btn-primary btn-block btn_cuestionario"><i class="bi bi-card-checklist"></i>Resolver</button>
+                    </div>
+                 </article>  
             </div>
         </div>
     </div>
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
+    
     <script src="../estilos/prism/prism.js"></script>
+    <script>
+        btn_cuestionario = document.querySelector('.btn_cuestionario');
+        btn_cuestionario.onclick = ()=>{
+        window.location.href='../cuestionario/index.html';
+        }
+    </script>
 </body>
 
 </html>

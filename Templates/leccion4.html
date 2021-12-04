@@ -8,50 +8,75 @@
     <meta name="Typescript" content="Curso de Typescript">
     <meta name="TPI115" content="Proyecto de la materia TPI115">
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../javascript/temas.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
 </head>
 
 <body>
+    <div id="fb-root"></div>
 
-    <nav class="navbar navbar-inverse ">
-        <div class="container-fluid">
-            <div class="navbar-header"></div>
-            <ul class="nav navbar-nav">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="leccion1.html">Lección 1</a></li>
-                <li><a href="leccion2.html">Lección 2</a></li>
-                <li><a href="leccion3.html">Lección 3</a></li>
-                <li class="active"><a href="leccion4.html">Lección 4</a></li>
-                <li><a href="leccion5.html">Lección 5</a></li>
-                <li><a href="leccion6.html">Lección 6</a></li>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="../images/typescript.png" alt="" width="34" height="34"></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion1.html">Lección 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion2.html">Lección 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion3.html">Lección 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="leccion4.html">Lección 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion5.html">Lección 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion6.html">Lección 6</a>
+                </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search" >
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.es/search">
                     <div class="form-group navegacion">
-                       
+
                         <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
-                        <input type=hidden name=sitesearch value="">
                     </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                    <img src="../images/typescript.png" alt="" width="34" height="34">
+                    <button type="submit" class="btn btn-success">Buscar</button>
                 </form>
-                
+
             </ul>
         </div>
     </nav>
+    <div style="background-color: #c9e9fc; height: 20px;"></div>
 
-    <h1 style="text-align: center;">TypeScript para programadores de Java / C#</h1>
-    <div class="container" style="padding: 20px;">
-        
+    <div class="container borde" style="text-align: center;"><h1>TypeScript para programadores de Java / C#</h1></div>
+    <div class="container" style="padding: 20px; border-radius: 15px;">
+
         <div class="row">
             <div class="col-sm-3" style="padding-top: 20px;">
                 <ul class="list-group">
@@ -62,25 +87,279 @@
                     <li class="list-group-item"><a href="#tab5">Más...</a></li>
                 </ul>
             </div>
-            <div class="secciones">
+            <div class="secciones col-sm-9">
                 <article id="tab1">
-                    <h1>1</h1>
+
+                    <h2>Lo que debes saber...</h2>
+                    <p class="justificar">TypeScript es una opción popular para los programadores acostumbrados a otros
+                        lenguajes con escritura estática, como C # y Java.</p>
+
+                    <p class="justificar">El sistema de tipos de TypeScript ofrece muchos de los mismos beneficios, como
+                        una mejor finalización del código,
+                        una detección más temprana de errores y una comunicación más clara entre las partes de su
+                        programa. Si bien TypeScript
+                        proporciona muchas características familiares para estos desarrolladores, vale la pena dar un
+                        paso atrás para ver cómo JavaScript
+                        (y por lo tanto TypeScript) difieren de los lenguajes OOP tradicionales. Comprender estas
+                        diferencias lo ayudará a escribir mejor
+                        código JavaScript y evitará los errores comunes en los que pueden caer los programadores que
+                        pasan directamente de C # / Java a TypeScript.</p>
+                    <p class="justificar">TypeScript amplía la sintaxis de JS y agrega nuevas características orientadas
+                        a objetos como interfaces, clases,
+                        módulos y anotaciones, lo que lo hace más claro en la estructura del código y la división de
+                        módulos, y el código legible.
+                        Así que algunas personas dicen <strong>"TypeScript hace que JavaScript vuelva a ser
+                            Java".</strong></p>
+                    <p class="justificar">La característica fundamental de TypeScript es que compila en Javascript
+                        nativo, por lo que se puede
+                        usar en todo proyecto donde se esté usando Javascript. Dicho con otras palabras, cuando se usa
+                        TypeScript en algún
+                        momento se realiza su compilación, convirtiendo su código a Javascript común. El navegador, o
+                        cualquier otra plataforma
+                        donde se ejecuta Javascript, nunca llegará a enterarse que el código original estaba escrito en
+                        TypeScript, porque lo
+                        único que llegará a ejecutar es el Javascript resultante de la compilación.</p>
+
+                    <p class="justificar">En resumen, TypeScript es lo que se conoce como un "superset" de Javascript,
+                        aportando herramientas
+                        avanzadas para la programación que traen grandes beneficios a los proyectos.</p>
+
+                    <h2>¿Qué necesitas para usar TypeScript</h2>
+                    <p class="justificar">Básicamente necesitamos descargar dos programas. El primero es NodeJS, no
+                        porque necesitemos desarrollar con Node, sino porque el compilador de TypeScript está
+                        desarrollado en NodeJS.
+
+                        Desde el sitio de NodeJS encontramos las opciones para la instalación en nuestro sistema
+                        operativo, por medio de un típico instalador con su asistente (siguiente, siguiente…) Más
+                        información en el Manual de NodeJS.
+
+                        Luego necesitarás el TSC (Command-line TypeScript Compiler), la herramienta que nos permite
+                        compilar un archivo TypeScript a Javascript nativo.</p>
+
+                    <pre><code class="language-ts">npm install -g typescript</code></pre>
+
+                    <p class="justificar">Este es un ejemplo de un código de TypeScript: </p>
+                    <pre><code class="language-ts">var a:number = 9;
+a += 4;
+                            
+function mostrar(b:string) :void{
+    console.log(b);
+}
+mostrar('hola');</code></pre>
+
+                    <p class="justificar">Para compilarlo usarás el mencionado TSC y lanzarás un sencillo comando que
+                        convertirá el código a Javascript nativo.</p>
+                    <pre><code class="language-ts">tsc ejemplo.ts</code></pre>
+
+
                 </article>
                 <article id="tab2">
-                    <h1>2</h1>
+                    <h2>Coaprendizaje de JavaScript</h2>
+                    <p class="justificar">Si ya está familiarizado con JavaScript, pero es principalmente un programador
+                        de Java o C #, esta página de
+                        introducción puede ayudarlo a explicar algunos de los errores y errores comunes a los que podría
+                        ser susceptible. Algunas de las
+                        formas en que los tipos de modelos de TypeScript son bastante diferentes de Java o C #, y es
+                        importante tenerlas en cuenta al aprender
+                        TypeScript.</p>
+                    <p class="justificar">Si es un programador de Java o C # que es nuevo en JavaScript en general, le
+                        recomendamos que primero aprenda un poco de
+                        JavaScript sin tipos para comprender los comportamientos en tiempo de ejecución de JavaScript.
+                        Debido a que TypeScript no cambia la forma en
+                        que se ejecuta su código , aún tendrá que aprender cómo funciona JavaScript para escribir código
+                        que realmente haga algo.</p>
+                    <p class="justificar">Es importante recordar que TypeScript usa el mismo tiempo de ejecución que
+                        JavaScript, por lo que cualquier recurso
+                        sobre cómo lograr un comportamiento de ejecución específico (convertir una cadena en un número,
+                        mostrar una alerta, escribir un archivo
+                        en el disco, etc.) siempre se aplicará igualmente bien a Programas TypeScript. </p>
+                    <p style="text-align: center;">¡No se limite a recursos específicos de TypeScript!</p>
+                    <p style="text-align: center;"><iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/4kB3A3RZCBY" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></p>
+                    <h2>Algunos ejemplos de diferencias entre Typescript y JavaScript</h2>
+                    <h4>Tipos básicos</h4>
+                    <p class="justificar">index.js</p>
+                    <pre><code class="language-ts">const foo = 'bar'
+const bar = 1
+const baz = true
+const qux = ['bar', 'baz', 'qux']</code></pre>
+                    <p class="justificar">index.ts</p>
+                    <pre><code class="language-ts">const foo: string = 'bar'
+const bar: number = 1
+const baz: boolean = true
+const qux: string[] = ['bar', 'baz', 'qux']</code></pre>
+                    <br><h4>Null</h4>
+                    <p class="justificar">index.js</p>
+                    <pre><code class="language-ts">let u = undefined
+let n = null
+                        
+let a = 'bar'
+a = null
+                        
+let b = 'bar'
+b = null
+                        
+if (b != null) {
+    const l = b.length
+    console.log(l)
+}</code></pre>
+                   <p class="justificar">index.ts</p>
+                   <pre><code class="language-ts">let n: null = null
+                        
+let a: string = 'bar'
+// no compila: a = null
+let b: string | null = 'bar'
+// compila: b = null
+                        
+if (b != null) {
+    const l = b.length
+    console.log(l)
+}</code></pre>
+
+                    <br><h4>Funciones</h4>
+                    <p class="justificar">index.js</p>
+                    <pre><code class="language-ts">function suma(a, b = 1) {
+    return a + b
+}
+                        
+const res = suma(2).toFixed(4)
+console.log(res)</code></pre>
+                    <p class="justificar">index.ts</p>
+                    <pre><code class="language-ts">function suma(a: number, b: number = 1): number {
+    return a + b
+}
+                      
+const resultado = suma(2).toFixed(4)
+console.log(resultado)</code></pre>
                 </article>
                 <article id="tab3">
-                    <h1>3</h1>
+                    <h2>Repensar la clase</h2>
+                    <p class="justificar">C # y Java son lo que podríamos llamar lenguajes OOP obligatorios . En estos lenguajes, la clase es la unidad básica de organización del código 
+                        y también el contenedor básico de todos los datos y comportamientos en tiempo de ejecución. Obligando a toda la funcionalidad y los datos 
+                        que se realizará en las clases puede ser un buen modelo de dominio para algunos problemas, pero no todos los dominios necesita ser representado de esta manera.</p>
+                        <h4>Funciones y datos gratuitos</h4>
+                        <p class="justificar">En JavaScript, las funciones pueden vivir en cualquier lugar y los datos se pueden transmitir libremente sin estar dentro de un archivo classo struct. 
+                            Esta flexibilidad es extremadamente poderosa. Las funciones "libres" (las que no están asociadas con una clase) que trabajan sobre datos sin una jerarquía 
+                            OOP implícita tienden a ser el modelo preferido para escribir programas en JavaScript.</p><br>
+                            <h4>Clases estáticas</h4>
+                            <p class="justificar">Además, ciertas construcciones de C # y Java, como singletons y clases estáticas, son innecesarias en TypeScript.</p>
+                            <h4 style="text-align: center;">Más sobre las clases</h4>
+                            <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Ivm6FiEh0ck?start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                            <h2>OOP en TypeScript</h2>
+                            <p class="justificar">Dicho esto, ¡aún puedes usar las clases si quieres! Algunos problemas son adecuados para ser resueltos por una jerarquía OOP 
+                                tradicional, y el soporte de TypeScript para clases de JavaScript hará que estos modelos sean aún más poderosos. TypeScript admite muchos patrones 
+                                comunes, como la implementación de interfaces, herencia y métodos estáticos.</p>
+                            <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/dDgCIW21eZQ?start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+                            
                 </article>
                 <article id="tab4">
-                    <h1>4</h1>
+                    <h2>Repensar los tipos</h2>
+                    <p>La comprensión de TypeScript de un tipo es en realidad bastante diferente a la de C # o Java. Exploremos algunas diferencias.</p>
+                    <h3>Sistemas de tipo nominal reificado</h3>
+                    <p class="justificar">En C # o Java, cualquier valor u objeto dado tiene un tipo exacto, ya sea nullun tipo de clase primitivo o conocido. Podemos llamar a métodos como value.GetType()o value.getClass()para consultar el tipo exacto en tiempo de ejecución. La definición de este tipo residirá en una clase en algún lugar con algún nombre, y no podemos usar dos clases con formas similares en lugar de la otra a menos que haya una relación de herencia explícita o una interfaz comúnmente implementada.</p>
+                    <h3>Tipos como conjuntos</h3>
+                    <p class="justificar">En C # o Java, es significativo pensar en una correspondencia uno a uno entre los tipos de tiempo de ejecución y sus declaraciones en tiempo de compilación.</p>
+                    <p class="justificar">En TypeScript, es mejor pensar en un tipo como un conjunto de valores que comparten algo en común. Debido a que los tipos son solo conjuntos, un valor particular puede pertenecer a muchos conjuntos al mismo tiempo.</p>
+                    <p class="justificar">Una vez que empiezas a pensar en los tipos como conjuntos, ciertas operaciones se vuelven muy naturales. Por ejemplo, en C #, es incómodo pasar un valor que sea un <i>string</i> o <i>int</i>, porque no hay un solo tipo que represente este tipo de valor.</p>
+                    <p class="justificar">En TypeScript, esto se vuelve muy natural una vez que te das cuenta de que cada tipo es solo un conjunto. ¿Cómo describe un valor que pertenece al <i>string</i> conjunto o al <i>number</i> conjunto? Simplemente pertenece a la unión de los conjuntos: <i>string</i> |<i>number</i>.</p>
+                    <p class="justificar">TypeScript proporciona una serie de mecanismos para trabajar con tipos de una manera teórica de conjuntos, y los encontrará más intuitivos si piensa en los tipos como conjuntos.</p>
+                    <h3>Tipos estructurales borrados</h3>
+                    <p class="justificar">En TypeScript, los objetos no son de un solo tipo exacto. Por ejemplo, si construimos un objeto que satisface una interfaz, podemos usar ese objeto donde se espera esa interfaz aunque no haya una relación declarativa entre los dos.</p>
+                    <pre><code class="language-ts">interface Pointlike {
+    x: number;
+    y: number;
+}
+interface Named {
+    name: string;
+}
+                       
+function logPoint(point: Pointlike) {
+    console.log("x = " + point.x + ", y = " + point.y);
+}
+                       
+function logName(x: Named) {
+    console.log("Hello, " + x.name);
+}
+                       
+const obj = {
+    x: 0,
+    y: 0,
+    name: "Origin",
+};
+                       
+logPoint(obj);
+logName(obj);</code></pre>
+
+                    <p class="justificar">El sistema de tipos de TypeScript es estructural , no nominal: podemos usarlo <i>obj</i> como un <i>Pointlike</i> porque tiene <i>x</i> y <i>y</i> propiedades que son ambos números. Las relaciones entre los tipos están determinadas por las propiedades que contienen, no por si se declararon con alguna relación en particular.</p>
+                    <p class="justificar">Sistema de tipos de transcripción también está no cosificado : No hay nada en tiempo de ejecución que nos dicen que <i>obj</i> es <i>Pointlike</i>. De hecho, el <i>Pointlike</i> tipo no está presente de ninguna forma en tiempo de ejecución.</p>
+                    <p class="justificar">Volviendo a la idea de tipos como conjuntos , podemos pensar en ellos <i>obj</i> como miembros tanto del <i>Pointlike</i> conjunto de valores como del <i>Named</i> conjunto de valores.</p>
+                    <h3>Consecuencias de la tipificación estructural</h3>
+                    <p class="justificar">Los programadores de programación orientada a objetos a menudo se sorprenden por dos aspectos particulares de la tipificación estructural.</p>
+                    <h4>Tipos vacíos</h4>
+                    <p class="justificar">La primera es que el tipo vacío parece desafiar las expectativas:</p>
+                    <pre><code class="language-ts">class Empty {}
+ 
+function fn(arg: Empty) {
+    // do something?
+}
+                         
+// No error, but this isn't an 'Empty' ?
+    fn({ k: 10 });</code></pre>
+                    <p class="justificar">TypeScript determina si la llamada a <i>fn</i> aquí es válida al ver si el argumento proporcionado es válido <i>Empty</i>. Lo hace examinando la estructura de <i>{k:10}</i> y <i>class Empty { }</i>. Podemos ver que <i>{k:10}</i> tiene todas las propiedades que <i>Empty</i> tiene, porque <i>Empty</i> no tiene propiedades. Por lo tanto, ¡esta es una llamada válida!</p>
+                    <p class="justificar">Esto puede parecer sorprendente, pero en última instancia es una relación muy similar a la que se aplica en los lenguajes de programación orientada a objetos nominales. Una subclase no puede eliminar una propiedad de su clase base, porque hacerlo destruiría la relación de subtipo natural entre la clase derivada y su base. Los sistemas de tipos estructurales simplemente identifican implícitamente esta relación al describir subtipos en términos de tener propiedades de tipos compatibles.</p>
+                    <h4>Tipos idénticos</h4>
+                    <p class="justificar">Otra fuente frecuente de sorpresa viene con tipos idénticos:</p>
+                    <pre><code class="language-ts">class Car {
+    drive() {
+        // hit the gas
+    }
+}
+class Golfer {
+    drive() {
+        // hit the ball far
+    }
+}
+// No error?
+let w: Car = new Golfer();</code></pre>
+                    <p class="justificar">Nuevamente, esto no es un error porque las estructuras de estas clases son las mismas. Si bien esto puede parecer una fuente potencial de confusión, en la práctica, las clases idénticas que no deberían estar relacionadas no son comunes.</p>
+                    <h2>Tipo especial <i>any</i></h2>  
+                    <p class="justificar">TypeScript también tiene un tipo especial <i>any</i>, que puede usar siempre que no desee que un valor en particular cause errores de verificación de tipo.</p>
+                    <p class="justificar">Cuando un valor es de tipo <i>any</i>, puede acceder a cualquier propiedad del mismo (que a su vez será de tipo <i>any</i>), llamarlo como una función, asignarlo a (o desde) un valor de cualquier tipo, o prácticamente cualquier otra cosa que sea sintácticamente legal:</p>
+                    <pre><code class="language-ts">let obj: any = { x: 0 };
+// None of the following lines of code will throw compiler errors.
+// Using `any` disables all further type checking, and it is assumed 
+// you know the environment better than TypeScript.
+obj.foo();
+obj();
+obj.bar = 100;
+obj = "hello";
+const n: number = obj;</code></pre>
+                     <p class="justificar">El anytipo es útil cuando no desea escribir un tipo largo solo para convencer a TypeScript de que una línea de código en particular está bien.</p>
+                     <h4>Si deseas aprender más, puedes ver el siguiente video:</h4>
+                     <br>
+                     <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Kt5DLYeIwCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </article>
+
                 <article id="tab5">
-                    <h1>5</h1>
+                    <h1 style="text-align: center;">Curso Completo Adicional</h1>
+                    <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Xxqh0RoWxNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </article>
-            </div> 
+            </div>
         </div>
+
+        <div style="background-color: #ffffff; height: 150px;"></div>
+        
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1" nonce="Tbk4f7L3"></script>
+
+        <div class="fb-comments" data-href="https://github.com/MemoCJH/Etapa2ProyectoTPI115" data-width="100%" data-numposts="5"></div>
+
     </div>
+
+    <div style="background-color: #c9e9fc; height: 50px;"></div>
+
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
