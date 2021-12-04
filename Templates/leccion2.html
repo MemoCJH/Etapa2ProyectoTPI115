@@ -8,74 +8,286 @@
     <meta name="Typescript" content="Curso de Typescript">
     <meta name="TPI115" content="Proyecto de la materia TPI115">
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/temas.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse ">
-        <div class="container-fluid">
-            <div class="navbar-header"></div>
-            <ul class="nav navbar-nav">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="leccion1.html">Lección 1</a></li>
-                <li class="active"><a href="leccion2.html">Lección 2</a></li>
-                <li><a href="leccion3.html">Lección 3</a></li>
-                <li><a href="leccion4.html">Lección 4</a></li>
-                <li><a href="leccion5.html">Lección 5</a></li>
-                <li><a href="leccion6.html">Lección 6</a></li>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="../images/typescript.png" alt="" width="34" height="34"></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion1.html">Lección 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="leccion2.html">Lección 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion3.html">Lección 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion4.html">Lección 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion5.html">Lección 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion6.html">Lección 6</a>
+                </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search" >
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.es/search">
                     <div class="form-group navegacion">
-                       
+
                         <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
-                        <input type=hidden name=sitesearch value="">
                     </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                    <img src="../images/typescript.png" alt="" width="34" height="34">
+                    <button type="submit" class="btn btn-success">Buscar</button>
                 </form>
-                
+
             </ul>
         </div>
     </nav>
+    <div style="background-color: #c9e9fc; height: 20px;"></div>
 
-
-    <div class="container">
+<div class="container borde" style="text-align: center;">
+<h1 >TypeScript para el nuevo programador</h1></div>
+    <div class="container" style="padding: 20px; border-radius: 15px;">
 
         <div class="row">
-            <div class="col-sm-3 ">
+            <div class="col-sm-3" style="padding-top: 20px;">
                 <ul class="list-group">
-                    <li class="list-group-item">tema 1</li>
-                    <li class="list-group-item">tema 2</li>
-                    <li class="list-group-item">tema 3</li>
-                </ul>
+                    <li class="list-group-item"><a href="#tab1">¿Qué es Javascript?</a></li>
+                    <li class="list-group-item"><a href="#tab2">Un verificador de tipo estático</a></li>
+                    <li class="list-group-item"><a href="#tab3">Aprendiendo JavaScript y TypeScript</a></li>
+                 </ul>
             </div>
+            <div class="secciones col-sm-9">
+                <article id="tab1">
+                    <h1>¿Qué es Javascript?</h1>
+                    <p>JavaScript (también conocido como ECMAScript) comenzó su vida como un lenguaje de programación
+                        simple para navegadores. En el momento en que se inventó, se esperaba que se usara para pequeños
+                        fragmentos de código incrustados en una página web; escribir más de unas pocas docenas de líneas
+                        de código habría sido algo inusual. Debido a esto, los primeros navegadores web ejecutaban dicho
+                        código con bastante lentitud. Sin embargo, con el tiempo, JS se hizo cada vez más popular y los
+                        desarrolladores web comenzaron a usarlo para crear experiencias interactivas.</p>
 
-            <div class="col-sm-9">
-                <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the
-                    navbar.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae architecto assumenda vitae
-                    voluptatem fugiat asperiores odit optio voluptas distinctio quod facilis earum voluptates corporis
-                    ratione dolores eius, excepturi laudantium.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga repellendus debitis velit
-                    corporis optio suscipit odit nobis ipsa, consequuntur quisquam deserunt maxime, nulla ullam culpa
-                    quasi aperiam voluptatibus distinctio.</p>
+                    <p>Los desarrolladores de navegadores web respondieron a este mayor uso de JS optimizando sus
+                        motores de ejecución (compilación dinámica) y ampliando lo que se podía hacer con ellos
+                        (agregando API), lo que a su vez hizo que los desarrolladores web lo usaran aún más. En los
+                        sitios web modernos, su navegador ejecuta con frecuencia aplicaciones que abarcan cientos de
+                        miles de líneas de código. Se trata de un crecimiento prolongado y gradual de "la web", que
+                        comienza como una simple red de páginas estáticas y evoluciona hacia una plataforma para
+                        aplicaciones ricas de todo tipo.</p>
 
+                    <p>Más que esto, JS se ha vuelto lo suficientemente popular como para usarse fuera del contexto de
+                        los navegadores, como la implementación de servidores JS usando node.js. La naturaleza de
+                        "ejecutar en cualquier lugar" de JS lo convierte en una opción atractiva para el desarrollo
+                        multiplataforma. ¡Hay muchos desarrolladores en estos días que usan solo JavaScript para
+                        programar toda su pila!</p>
 
+                    <p>En resumen, tenemos un lenguaje que fue diseñado para usos rápidos y luego se convirtió en una
+                        herramienta completa para escribir aplicaciones con millones de líneas. Cada idioma tiene sus
+                        propias peculiaridades : rarezas y sorpresas, y el humilde comienzo de JavaScript hace que tenga
+                        muchas de ellas. Algunos ejemplos:</p>
+                    <ul>
+                        <li>El operador de igualdad de JAvaScript ( = = ) coaaciona sus argumentos,
+                            lo que lleva aun comportamiento inesperado:
+                            <pre><code class="language-ts">   
+                                if ("" == 0) {
+                                    // It is! But why??
+                                  }
+                                  if (1 < x < 3) {
+                                    // True for *any* value of x!
+                                  }
+                                </code></pre>
+                        </li>
+                        <li>JavaScript también permite acceder a propiedades que no están presentes:
+                            <pre><code class="language-ts">   
+                                const obj = { width: 10, height: 15 };
+                                // Why is this NaN? Spelling is hard!
+                                const area = obj.width * obj.heigth;
+                                </code></pre>
+                        </li>
+                    </ul>
 
+                    <p>La mayoría de los lenguajes de programación arrojarían un error cuando ocurren este tipo de
+                        errores, algunos lo harían durante la compilación, antes de que se ejecute cualquier código. Al
+                        escribir programas pequeños, estas peculiaridades son molestas pero manejables; al escribir
+                        aplicaciones con cientos o miles de líneas de código, estas constantes sorpresas son un problema
+                        grave.</p>
 
+                </article>
+                <article id="tab2">
+                    <h1>Un verificador de tipo estático</h1>
+
+                    <p>Dijimos anteriormente que algunos lenguajes no permitirían que esos programas con errores se
+                        ejecutaran en absoluto. La detección de errores en el código sin ejecutarlo se conoce como
+                        verificación estática . Determinar qué es un error y qué no se basa en los tipos de valores en
+                        los que se opera se conoce como verificación de tipo estática .</p>
+
+                    <p>TypeScript verifica un programa en busca de errores antes de la ejecución, y lo hace en función
+                        de los tipos de valores , es un verificador de tipo estático . Por ejemplo, el último ejemplo
+                        anterior tiene un error debido al tipo de obj. Aquí está el error que encontró TypeScript:</p>
+
+                    <pre><code class="language-ts">   
+                        const obj = { width: 10, height: 15 };
+                        const area = obj.width * obj.heigth;
+                        Property 'heigth' does not exist on type '{ width: number; height: number; }'. Did you mean 'height'?
+                    </code></pre>
+
+                    <h4>Un superconjunto scrito de JavaScript</h4>
+
+                    <p>Sin embargo, ¿cómo se relaciona TypeScript con JavaScript?<br>
+
+                        <b>Sintaxis</b><br>
+                        TypeScript es un lenguaje que es un superconjunto de JavaScript: la sintaxis JS es, por lo
+                        tanto, TS legal. La sintaxis se refiere a la forma en que escribimos texto para formar un
+                        programa. Por ejemplo, este código tiene un error de sintaxis porque le falta un ):
+                    </p>
+
+                    <pre><code class="language-ts">   
+                        let a = (4
+                        ')' expected.
+                    </code></pre>
+
+                    <p>TypeScript no considera que ningún código JavaScript sea un error debido a su sintaxis. Esto
+                        significa que puede tomar cualquier código JavaScript que funcione y colocarlo en un archivo
+                        TypeScript sin preocuparse por cómo está escrito exactamente.<br>
+
+                        <b>Tipos</b><br>
+                        Sin embargo, TypeScript es un superconjunto escrito , lo que significa que agrega reglas sobre
+                        cómo se pueden usar diferentes tipos de valores. El error anterior obj.heigthno fue un error de
+                        sintaxis : es un error de usar algún tipo de valor (un tipo ) de manera incorrecta.<br>
+
+                        Como otro ejemplo, este es el código JavaScript que se puede ejecutar en el navegador, y se va a
+                        registrar un valor de:
+                    </p>
+
+                    <pre><code class="language-ts">   
+                            console.log(4 / []);.
+                        </code></pre>
+
+                    <p>Este programa sintácticamente legal registra Infinity. TypeScript, sin embargo, considera que la
+                        división de números por una matriz es una operación sin sentido y generará un error:</p>
+
+                    <pre><code class="language-ts">   
+                            console.log(4 / []);
+                            The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+                        </code></pre>
+                    <p>
+                        Es posible que realmente qué va a dividir un número por una matriz, tal vez sólo para ver qué
+                        pasa, pero la mayor parte del tiempo, sin embargo, esto es un error de programación. El
+                        comprobador de tipos de TypeScript está diseñado para permitir el paso de programas correctos
+                        sin dejar de detectar tantos errores comunes como sea posible. (Más adelante, aprenderemos sobre
+                        las configuraciones que puede usar para configurar qué tan estrictamente TypeScript verifica su
+                        código).<br>
+
+                        Si mueve algún código de un archivo JavaScript a un archivo TypeScript, es posible que vea
+                        errores de tipo según cómo esté escrito el código. Estos pueden ser problemas legítimos con el
+                        código o que TypeScript sea demasiado conservador. A lo largo de esta guía, demostraremos cómo
+                        agregar varias sintaxis de TypeScript para eliminar tales errores.
+                    </p>
+
+                    <h4>Comportamiento en tiempo de ejecución</h4>
+                    <p>TypeScript también es un lenguaje de programación que conserva el comportamiento en tiempo de
+                        ejecución de JavaScript. Por ejemplo, dividir por cero en JavaScript produce en Infinitylugar de
+                        lanzar una excepción de tiempo de ejecución. Como principio, TypeScript nunca cambia el
+                        comportamiento en tiempo de ejecución del código JavaScript.<br>
+
+                        Esto significa que si mueve código de JavaScript a TypeScript, se garantiza que se ejecutará de
+                        la misma manera, incluso si TypeScript cree que el código tiene errores de tipo.<br>
+
+                        Mantener el mismo comportamiento en tiempo de ejecución que JavaScript es una promesa
+                        fundamental de TypeScript porque significa que puede realizar una transición fácil entre los dos
+                        lenguajes sin preocuparse por las diferencias sutiles que podrían hacer que su programa deje de
+                        funcionar.</p>
+
+                    <h4>Tipo de Borrado</h4>
+                    <p>En términos generales, una vez que el compilador de TypeScript termina de verificar su código,
+                        borra los tipos para producir el código "compilado" resultante. Esto significa que una vez que
+                        se compila su código, el código JS simple resultante no tiene información de tipo.<br>
+
+                        Esto también significa que TypeScript nunca cambia el comportamiento de su programa en función
+                        de los tipos que infirió. La conclusión es que, si bien es posible que vea errores de tipo
+                        durante la compilación, el sistema de tipos en sí no influye en cómo funciona su programa cuando
+                        se ejecuta.<br>
+
+                        Finalmente, TypeScript no proporciona bibliotecas de tiempo de ejecución adicionales. Sus
+                        programas usarán la misma biblioteca estándar (o bibliotecas externas) que los programas de
+                        JavaScript, por lo que no hay un marco adicional específico de TypeScript para aprender.</p>
+
+                </article>
+                <article id="tab3">
+                    <h1>Aprendiendo JavaScript y TypeScript</h1>
+                    <p>
+                        Con frecuencia vemos la pregunta "¿Debo aprender JavaScript o TypeScript?".<br>
+
+                        ¡La respuesta es que no se puede aprender TypeScript sin aprender JavaScript! TypeScript
+                        comparte la sintaxis y el comportamiento en tiempo de ejecución con JavaScript, por lo que todo
+                        lo que aprenda sobre JavaScript lo ayudará a aprender TypeScript al mismo tiempo.<br>
+
+                        Hay muchos, muchos recursos disponibles para que los programadores aprendan JavaScript; usted
+                        debe no hacer caso omiso de estos recursos si usted está escribiendo a máquina. Por ejemplo, hay
+                        aproximadamente 20 veces más preguntas de StackOverflow etiquetadas javascriptque typescript,
+                        pero todas las javascriptpreguntas también se aplican a TypeScript.<br>
+
+                        Si se encuentra buscando algo como "cómo ordenar una lista en TypeScript", recuerde: TypeScript
+                        es el tiempo de ejecución de JavaScript con un verificador de tipo en tiempo de compilación . La
+                        forma de ordenar una lista en TypeScript es la misma forma en que lo hace en JavaScript. Si
+                        encuentra un recurso que usa TypeScript directamente, eso también es genial, pero no se limite a
+                        pensar que necesita respuestas específicas de TypeScript para preguntas cotidianas sobre cómo
+                        realizar tareas en tiempo de ejecución.
+                    </p>
+                </article>
+                
             </div>
         </div>
+
+        <div style="background-color: #ffffff; height: 150px;"></div>
+
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1"
+            nonce="Tbk4f7L3"></script>
+
+        <div class="fb-comments" data-href="https://github.com/MemoCJH/Etapa2ProyectoTPI115" data-width="100%"
+            data-numposts="5"></div>
+
     </div>
+
+    <div style="background-color: #c9e9fc; height: 50px;"></div>
+
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
+
+    <script src="../estilos/prism/prism.js"></script>
+
+
 </body>
 
 </html>
