@@ -30,11 +30,10 @@ body{
 	right:0px; /*A la izquierda deje un espacio de 0px*/
 	bottom:0px; /*Abajo deje un espacio de 0px*/
 	height:30px; /*alto del div*/
-	top: auto;
-	z-index:9999;
+	top:auto;
+	z-index: 9999;
 	text-align: center;
-
-	 }
+}
 
 .list-group-item{
 	background: #4da8cf;
@@ -59,7 +58,6 @@ html{
 	border-color: rgb(1, 116, 145);
     border-width: 5px;
     border-style: solid;
-	width: 1174px;
 	margin: 0 auto;
 	margin-bottom: 10px;
 }
