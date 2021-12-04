@@ -8,74 +8,291 @@
     <meta name="Typescript" content="Curso de Typescript">
     <meta name="TPI115" content="Proyecto de la materia TPI115">
     <meta name="Curso de Typescript" content="Curso impartido por la materia TPI115">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="../javascript/temas.js"></script>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse ">
-        <div class="container-fluid">
-            <div class="navbar-header"></div>
-            <ul class="nav navbar-nav">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="leccion1.html">Lección 1</a></li>
-                <li><a href="leccion2.html">Lección 2</a></li>
-                <li class="active"><a href="leccion3.html">Lección 3</a></li>
-                <li><a href="leccion4.html">Lección 4</a></li>
-                <li><a href="leccion5.html">Lección 5</a></li>
-                <li><a href="leccion6.html">Lección 6</a></li>
+    <div id="fb-root"></div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="../images/typescript.png" alt="" width="34" height="34"></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion1.html">Lección 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion2.html">Lección 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="leccion3.html">Lección 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion4.html">Lección 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion5.html">Lección 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leccion6.html">Lección 6</a>
+                </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" method=GET action="http://www.google.es/search" >
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.es/search">
                     <div class="form-group navegacion">
-                       
+
                         <input type="text" class="form-control" placeholder="Tema a buscar" name="q">
-                        <input type=hidden name=sitesearch value="">
                     </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                    <img src="../images/typescript.png" alt="" width="34" height="34">
+                    <button type="submit" class="btn btn-success">Buscar</button>
                 </form>
-                
+
             </ul>
         </div>
     </nav>
+    <div style="background-color: #c9e9fc; height: 20px;"></div>
 
 
     <div class="container">
 
         <div class="row">
-            <div class="col-sm-3 ">
+            <div class="col-sm-3" style="padding-top: 20px;">
                 <ul class="list-group">
-                    <li class="list-group-item">tema 1</li>
-                    <li class="list-group-item">tema 2</li>
-                    <li class="list-group-item">tema 3</li>
+                    <li class="list-group-item"><a href="#tab1">TypeScript para programadores de JavaScript</a></li>
+                    <li class="list-group-item"><a href="#tab2">Tipos por inferencia</a></li>
+                    <li class="list-group-item"><a href="#tab3">Definiendo tipos</a></li>
+                    <li class="list-group-item"><a href="#tab4">Tipos de composición</a></li>
+                    <li class="list-group-item"><a href="#tab5">Sistema de tipo estructural</a></li>
                 </ul>
             </div>
 
-            <div class="col-sm-9">
-                <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the
-                    navbar.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae architecto assumenda vitae
-                    voluptatem fugiat asperiores odit optio voluptas distinctio quod facilis earum voluptates corporis
-                    ratione dolores eius, excepturi laudantium.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga repellendus debitis velit
-                    corporis optio suscipit odit nobis ipsa, consequuntur quisquam deserunt maxime, nulla ullam culpa
-                    quasi aperiam voluptatibus distinctio.</p>
-
-
-
-
-            </div>
+            <div class="secciones col-sm-9">
+                <article id="tab1">
+                    <h1>TypeScript para programadores de JavaScript</h1>
+                    <p>TypeScript tiene una relación inusual con JavaScript. 
+                        TypeScript ofrece todas las funciones de JavaScript y una capa adicional además de estas: el sistema de tipos de TypeScript.
+                    </p>
+                    <p>
+                        Por ejemplo, JavaScript proporciona primitivas de lenguaje como string y number, pero no verifica que las haya asignado de manera consistente. TypeScript lo hace.
+                    </p>
+                    
+                </article>
+                <article id="tab2">
+                    <h1>Tipos por inferencia</h1>
+                    <p>
+                        TypeScript conoce el lenguaje JavaScript y generará tipos por ti en muchos casos.Por ejemplo,al crear una variable y asignarle un valor determinado,TypeScript utilizará el valor como su tipo.
+                    </p>
+                    <pre><code class="language-ts">   
+                            let helloWorld = "Hello World";
+                    </code></pre>
+                    <p>
+                        Al comprender cómo funciona JavaScript, TypeScript puede construir un sistema de tipos que acepta código JavaScript pero tiene tipos. Esto ofrece un sistema de tipos sin necesidad de agregar caracteres adicionales para hacer que los tipos sean explícitos en su código. Así es como TypeScript sabe que helloWorld es una string en el ejemplo anterior.
+                        Es posible que haya escrito JavaScript en Visual Studio Code,y que haya tenido el autocompletado del editor.Visual Studio Code utiliza TypeScript bajo el capó para facilitar el trabajo con JavaScript.
+                    </p>
+                </article>
+                <article id="tab3">
+                    <h1>Definiendo tipos</h1>
+                    <p>
+                        Se puede utilizar una gran variedad de patrones de diseño en JavaScript.Sin embargo,algunos patrones de diseño dificultan que los tipos se infieran automáticamente (por ejemplo,los patrones que utilizan programación dinámica).Para cubrir estos casos,TypeScript soporta una extensión del lenguaje JavaScript,que ofrece lugares para que le digas a TypeScript cuáles deben ser los tipos.
+                        Por ejemplo, para crear un objeto con un tipo inferido que incluye name: string e id: number , puede escribir:
+                    </p>
+                    <pre><code class="language-ts">   
+                            const user = {
+                                name: "Hayes",
+                                id: 0,
+                              };
+                    </code></pre>
+                    <p>
+                        Puede describir explícitamente la forma de este objeto mediante una declaración de interface :
+                    </p>
+                    <pre><code class="language-ts">   
+                            interface User {
+                                name: string;
+                                id: number;
+                              }
+                    </code></pre>
+                    <p>
+                        Luego puede declarar que un objeto JavaScript se ajusta a la forma de su nueva interface usando una sintaxis como : TypeName después de una declaración de variable:
+                    </p>
+                    <pre><code class="language-ts">   
+                            const user: User = {
+                                name: "Hayes",
+                                id: 0,
+                              };
+                    </code></pre>
+                    <p>
+                        Si proporciona un objeto que no coincide con la interfaz que ha proporcionado, TypeScript le advertirá:
+                    </p>
+                    <pre><code class="language-ts">   
+                            interface User {
+                                name: string;
+                                id: number;
+                              }
+                               
+                              const user: User = {
+                                username: "Hayes",
+                                id: 0,
+                              };
+                    </code></pre>
+                    <p>
+                        Dado que JavaScript soporta clases y programación orientada a objetos,también lo hace TypeScript.Puedes usar una declaración de interfaz con clases:
+                    </p>
+                    <pre><code class="language-ts">   
+                            interface User {
+                                name: string;
+                                id: number;
+                              }
+                               
+                              class UserAccount {
+                                name: string;
+                                id: number;
+                               
+                                constructor(name: string, id: number) {
+                                  this.name = name;
+                                  this.id = id;
+                                }
+                              }
+                               
+                              const user: User = new UserAccount("Murphy", 1);
+                    </code></pre>
+                    <p>
+                        Puede utilizar las interfaces para anotar los parámetros y los valores de retorno de las funciones:
+                    </p>
+                    <pre><code class="language-ts">   
+                            function getAdminUser(): User {
+                                //...
+                              }
+                               
+                              function deleteUser(user: User) {
+                                // ...
+                              }
+                    </code></pre>
+                    <p>
+                        Ya existe un pequeño conjunto de tipos primitivos disponibles en JavaScript: boolean , bigint , null , number , string , symbol e undefined , que puede usar en una interfaz. TypeScript amplía esta lista con algunos más, como any (permitir cualquier cosa), unknown (asegúrese de que alguien que usa este tipo declare cuál es el tipo), never (no es posible que este tipo pueda suceder) y void (una función que devuelve undefined o no tiene valor de retorno).
+                    </p>
+                    <p>
+                        Verá que hay dos sintaxis para los tipos de construcción: interfaces y tipos . Debería preferir la interface . Utilice la type cuando necesite funciones específicas.
+                    </p>
+                </article>
+                <article id="tab4">
+                    <h1>Tipos de composición</h1>
+                    <p>
+                        Con TypeScript,puedes crear tipos complejos combinando tipos simples.Hay dos formas populares de hacerlo:con uniones y con genéricos.
+                    </p>
+                    <p>
+                        <h2>
+                            Union
+                        </h2>
+                        Con una unión, puede declarar que un tipo podría ser uno de muchos tipos. Por ejemplo, puede describir un tipo boolean o como true o false :
+                    </p>
+                    <pre><code class="language-ts">   
+                            type MyBool = true | false;
+                    </code></pre>
+                    <pre><code class="language-ts">   
+                            type WindowStates = "open" | "closed" | "minimized";
+                            type LockStates = "locked" | "unlocked";
+                            type PositiveOddNumbersUnderTen = 1 | 3 | 5 | 7 | 9;
+                    </code></pre>
+                    <pre><code class="language-ts">   
+                            function getLength(obj: string | string[]) {
+                                return obj.length;
+                              }
+                    </code></pre>
+                    <pre><code class="language-ts">   
+                            function wrapInArray(obj: string | string[]) {
+                                if (typeof obj === "string") {
+                                  return [obj];
+                                }
+                                return obj;
+                              }
+                    </code></pre>
+                    <p>
+                        <h2>
+                            Genericos
+                        </h2>
+                        Los genéricos proporcionan variables a los tipos.Un ejemplo común es un array.Un array sin genéricos puede contener cualquier cosa.Un array con genéricos puede describir los valores que contiene el array.
+                    </p>
+                    <pre><code class="language-ts">   
+                            type StringArray = Array<string>;
+                                type NumberArray = Array<number>;
+                                type ObjectWithNameArray = Array<{ name: string }>;
+                    </code></pre>
+                </article>
+                <article id="tab5">
+                    <h1>Sistema de tipo estructural</h1>
+                    <p>Uno de los principios básicos de TypeScript es que la verificación de tipos se centra en la forma que tienen los valores. A esto a veces se le llama "tipificación de pato" o "tipificación estructural".
+                        En un sistema de tipo estructural,si dos objetos tienen la misma forma,se considera que son del mismo tipo.</p>
+                        <pre><code class="language-ts">   
+                                interface Point {
+                                    x: number;
+                                    y: number;
+                                  }
+                                   
+                                  function logPoint(p: Point) {
+                                    console.log(`${p.x}, ${p.y}`);
+                                  }
+                                   
+                                  // registra "12, 26"
+                                  const point = { x: 12, y: 26 };
+                                  logPoint(point);
+                        </code></pre>
+                       
+                    <p>Si el objeto o la clase tiene todas las propiedades requeridas,TypeScript dirá que coinciden,independientemente de los detalles de la implementación.</p>
+                    <pre><code class="language-ts">   
+                            class VirtualPoint {
+                                x: number;
+                                y: number;
+                               
+                                constructor(x: number, y: number) {
+                                  this.x = x;
+                                  this.y = y;
+                                }
+                              }
+                               
+                              const newVPoint = new VirtualPoint(13, 56);
+                              logPoint(newVPoint); // registra "13, 56"
+                    </code></pre>
+                </article>
         </div>
     </div>
+    <div style="background-color: #ffffff; height: 150px;"></div>
+
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=304453788350463&autoLogAppEvents=1"
+            nonce="Tbk4f7L3"></script>
+
+        <div class="fb-comments" data-href="https://github.com/MemoCJH/Etapa2ProyectoTPI115" data-width="100%"
+            data-numposts="5"></div>
+
+    </div>
+
+    <div style="background-color: #c9e9fc; height: 50px;"></div>
+
     <div id="inferior">
         <p>Autores: Grupo 07 de TPI115 - UES</p>
     </div>
+
+    <script src="../estilos/prism/prism.js"></script>
 </body>
 
 </html>
