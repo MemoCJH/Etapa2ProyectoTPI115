@@ -86,6 +86,7 @@
                     <li class="list-group-item"><a href="#tab3">Definiendo tipos</a></li>
                     <li class="list-group-item"><a href="#tab4">Tipos de composición</a></li>
                     <li class="list-group-item"><a href="#tab5">Sistema de tipo estructural</a></li>
+                    <li class="list-group-item"><a href="#tab6">Cuestionario</a></li>
                 </ul>
             </div>
 
@@ -306,6 +307,14 @@
                               logPoint(newVPoint); // registra "13, 56"
                     </code></pre>
                 </article>
+                <article id="tab6">
+                    <h2 style="text-align: center;">¡Pon a prueba los conocimientos adquiridos!</h2>
+                    <h3>Resuelve el siguiente Cuestionario</h3>
+                    <!-- <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a> -->
+                    <div class="ir_cuestionario">
+                        <button class="btn btn-primary btn-block btn_cuestionario"><i class="bi bi-card-checklist"></i>Resolver</button>
+                    </div>
+                </article>
             </div>
         </div>
         <div style="background-color: #ffffff; height: 150px;"></div>
@@ -326,6 +335,13 @@
     </div>
 
     <script src="../estilos/prism/prism.js"></script>
+
+    <script>
+        btn_cuestionario = document.querySelector('.btn_cuestionario');
+        btn_cuestionario.onclick = ()=>{
+        window.location.href='../cuestionario/cuestionario_leccion3.html';
+        }
+    </script>
 </body>
 
 </html>
