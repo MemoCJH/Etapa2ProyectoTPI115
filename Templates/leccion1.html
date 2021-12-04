@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../estilos/prism/prism.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="../estilos/estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"><!-- Iconos Bootstrap -->
     <link rel="stylesheet" href="../estilos/prism/prism.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -84,6 +85,7 @@
                     <li class="list-group-item"><a href="#tab3">Ventajas de usar este lenguaje de programación</a></li>
                     <li class="list-group-item"><a href="#tab4">¿Utilizar TS o JS?</a></li>
                     <li class="list-group-item"><a href="#tab5">Empieza Ahora</a></li>
+                    <li class="list-group-item"><a href="#tab6">Cuestionario</a></li>
                 </ul>
             </div>
             <div class="secciones col-sm-9">
@@ -275,6 +277,14 @@
                     <p align="center"><a href="https://isolution.pro/es/t/typescript?alias=tutorial-de-typescript" target="_blank">clic aquí</a></p>
 
                 </article>
+                <article id="tab6">
+                    <h2 style="text-align: center;">¡Pon a prueba los conocimientos adquiridos!</h2>
+                    <h3>Resuelve el siguiente Cuestionario</h3>
+                    <!-- <a class="btn btn-primary btn-lg" href="../cuestionario/index.html">Ir</a> -->
+                    <div class="ir_cuestionario">
+                        <button class="btn btn-primary btn-block btn_cuestionario"><i class="bi bi-card-checklist"></i>Resolver</button>
+                    </div>
+                </article>
             </div>
         </div>
 
@@ -296,6 +306,13 @@
     </div>
 
     <script src="../estilos/prism/prism.js"></script>
+
+    <script>
+        btn_cuestionario = document.querySelector('.btn_cuestionario');
+        btn_cuestionario.onclick = ()=>{
+        window.location.href='../cuestionario/cuestionario_leccion1.html';
+        }
+    </script>
 
 </body>
 
