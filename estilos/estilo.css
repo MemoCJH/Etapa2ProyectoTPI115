@@ -79,6 +79,7 @@ html{
 	font-size: 18px;
 	margin-right: 7px;
 	
-	
-
 }
+article {
+	scroll-behavior: smooth;
+  }

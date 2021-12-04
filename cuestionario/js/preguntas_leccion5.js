@@ -2,59 +2,44 @@
 let questions = [
     {
     numb: 1,
-    question: "Esto es una prueba LECCION5",
-    answer: "d",
+    question: "Es uno de los tipos importantes de TypeScript",
+    answer: "(t: T) => U",
     options: [
-      "a",
-      "b",
-      "c",
-      "d"
+      "unknow",
+      "(t: T) => U",
+      "T()"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Es parte de los conceptos similares a Haskell",
+    answer: "Tipeado Contextual",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "Tipos en Caja",
+      "Tipeado gradual",
+      "Tipeado Contextual"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Cual es el predicado para el tipo: undefined?",
+    answer: "typeof undefined === “undefined”",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "typeof u === “undefined”",
+      "typeof undefined === “undefined”",
+      "typeof undef = “undefined”"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "TypeScript no tiene un modificador de readonly para las propiedades?",
+    answer: "Falso",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "Verdadero",
+      "Falso",
+      "Ninguno"
     ]
-  },
-    {
-    numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
-    options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
-    ]
-  },
+  }
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
 

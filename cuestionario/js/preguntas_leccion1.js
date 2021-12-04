@@ -2,57 +2,52 @@
 let questions = [
     {
     numb: 1,
-    question: "Pregunta numero 1 LECCION1?",
-    answer: "d",
+    question: "¿Cuál empresa creo TypeScript?",
+    answer: "Microsoft",
     options: [
-      "a",
-      "b",
-      "c",
-      "d"
+      "Google",
+      "Facebook",
+      "Microsoft"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "¿TypeScript es ideal para...?",
+    answer: "Proyectos complejos",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "Proyectos complejos",
+      "Proyectos sencillos",
+      "Para ninguna clase de proyectos"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "¿Cuál es una de las ventajas de usar este lenguaje de programación?",
+    answer: "Te da una muestra del futuro de JavaScript, con elementos tipados",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "Tiene una sintaxis parecedia a Python",
+      "Está basada en Java",
+      "Te da una muestra del futuro de JavaScript, con elementos tipados"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "¿Que tipo de dato soporta TypeScript?",
+    answer: "Tuplas",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "Clases",
+      "Listas",
+      "Tuplas"
     ]
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "¿Cuál lenguaje es más difícil de aprender?",
+    answer: "TypeScript",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "JavaScript",
+      "Ambos",
+      "TypeScript"
     ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question

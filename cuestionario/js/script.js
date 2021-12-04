@@ -156,11 +156,11 @@ function showResult(){
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
     else if(userScore > 2){ // if user scored more than 1
-        let scoreTag = '<span>Muy bien 😎, tu puntaje es:<p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>'+'<span> ¡Vamos!, Puedes Mejorar </span>';
+        let scoreTag = '<span>Muy bien 😎, tu puntaje es:<p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>'+'<span> Sigue así</span>';
         scoreText.innerHTML = scoreTag;
     }
     else{ // if user scored less than 1
-        let scoreTag = '<span> :( Tu puntaje es: <p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>'+'<span> Necesitas repasar, ¡Tú puedes! </span>';
+        let scoreTag = '<span> :( Tu puntaje es: <p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>'+'<span> Necesitas repasar, Vamos </span>';
         scoreText.innerHTML = scoreTag;
     }
 }
